@@ -1,0 +1,82 @@
+$color_deep-gray: #707070;
+$color_fontColor: #888888;
+$color_courseName: #1b1b1b;
+$color_tab-hover: #0075a9;
+$color_slickDotsActive: #0096D6;
+$color_slickDots: #9E9E9F;
+$color_topCourseTab-hover: #ec6941;
+$color_readMoreBtn: #68afdc;
+$color_footerNav: #2f3e53;
+$color_logo_red: #e13221;
+$color_login: #f39800;
+$color_category_eng: #c9c9c9;
+$color_tipsBg: #eeeeee;
+$color_tipsBrLeft: #0075a9;
+$color_lightBlueBtn: #00bbd3;
+$color_btnFree: #1983b1;
+$color_btnSpan: #fff100;
+$color_freetry: #3db1e6;
+$color_occupy: #0EB5FF;
+$color_occupy_logo: #0295D5;
+$color_warning: #a40000;
+$color_button: #e60012;
+$color_class: #df2012;
+$color_regulationBg: #f7f7f7;
+$color_introBgOdd: #f8f8f8;
+$color_tableHeadingBg: #e5e5e5;
+$color_white: #ffffff;
+
+/* slick carousel arrow Y position */
+
+$Ypos: -50%;
+
+/* breakpoints setting */
+$nav_mobile: max-width 1150px;
+$ipad: max-width 768px;
+
+/* animation for moving mainContents */
+.ani {
+  transition: all 0.5s !important;
+}
+
+.stopani, stopani * {
+  transition: none !important;
+}
+
+.mainContents {
+  position: relative;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+span.orange {
+  color: $color_topCourseTab-hover;
+}
+
+.backgroundColor {
+  background-color: #E5E5E5;
+
+  .innerBackground {
+    margin: 0 auto;
+    max-width: 1280px;
+    background-color: $color_white;
+  }
+}
+
+html {
+  font-family: "微軟正黑體", Arial;
+}
+
+$btnSize: 75px;
+$standardFontSize: 0.9375rem;
+$locationInfoWidth: 976px;
+$mapHeight: 456px;
+
+.separateLine {
+  width: 1px;
+  height: auto;
+  background-color: lighten($color_fontColor, 30%);
+  margin: 0 40px;
+}

@@ -1,0 +1,24 @@
+.spotSearch {
+  @include breakpoint($nav_mobile){
+    display: block;
+  }
+  display: none;
+  padding: 20px;
+  background-color: rgba(255,255,255,.75);
+  width: 100%;
+  position: fixed;
+  z-index: 98;
+  ul {
+    li {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+
+      a {
+        color: #fff;
+        padding: 5px;
+        background-color: #0EB5FF;
+      }
+    }
+  }
+}

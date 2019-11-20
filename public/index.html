@@ -1,0 +1,774 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no, maximum-scale=1.0, user-scalable=0">
+    <title>ES6</title>
+
+    <!--=========================== CSS ===========================-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!--    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">-->
+    <link rel="stylesheet" href="build/css/slick.css">
+    <link rel="stylesheet" href="build/css/slick-theme.css">
+    <link rel="stylesheet" href="build/css/venobox.css">
+    <link rel="stylesheet" href="build/css/vendor.min.css">
+    <link rel="stylesheet" href="build/css/styles.css">
+    <!--=========================== JS ===========================-->
+    <script defer defer src="build/js/light.min.js"></script>
+    <script defer defer src="build/js/brands.min.js"></script>
+    <!--    <script defer defer src="build/js/regular.min.js"></script>-->
+    <!--    <script defer defer src="build/js/solid.min.js"></script>-->
+    <script defer defer src="build/js/fontawesome.min.js"></script>
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <script type="text/javascript">
+
+        $(function () {
+            alert('很抱歉，目前本站瀏覽不支援IE9以下的瀏覽器，若看見版面跑掉，純屬正常狀況。');
+        });
+    </script>
+    <![endif]-->
+
+
+    <!--=========================== 思源黑體 ===========================-->
+    <!--<script src="https://use.typekit.net/mrp7iog.js"></script>
+    <script>try {
+        Typekit.load({async: true});
+    } catch (e) {
+    }</script>-->
+
+    <!--=========================== WOW ===========================-->
+    <script type="text/javascript" src="build/js/wow.min.js"></script>
+    <script type="text/javascript">new WOW().init();</script>
+
+</head>
+<body>
+<div class="backgroundColor">
+    <div class="innerBackground">
+        <!--navigation bar for desktop-->
+        <div class="navFlexContainer">
+            <div class="navbar-brand">
+                <div class="openBtn"><i class="fal fa-bars"></i></div>
+                <img src="build/images/logo.svg" alt="">
+                <div class="searchToggleBtn__mobile"><i class="fal fa-search"></i></div>
+            </div>
+            <div class="navbar-nav">
+                <ul class="menuContainer">
+                    <li class="wow fadeInRight" data-wow-delay=".2s">
+                        <a class="menuToggle lv1Menu" href="#course">關於新據點</a>
+                        <div class="mddWrap" style="height: 380px;">
+                            <div class="mddInner">
+                                <div class="aboutOccupy aboutOccupy--adjust">
+                                    <div class="options options--about">
+                                        <div><a href="#">關於我們</a></div>
+                                        <div><a href="#">新據點粉絲團</a></div>
+                                        <div><a href="#">最新消息</a></div>
+                                    </div>
+
+                                    <div class="gn-promos">
+                                        <a href="https://www.facebook.com/AD.OCCUPY" target="_blank" class="gn-promo">
+                                            <div class="figure">
+                                                <h4 class="subject">粉絲專頁</h4>
+                                                <div class="img">
+                                                    <img src="./build/images/fansPagejpg.jpg" alt="m1">
+                                                </div>
+
+                                                <div class="figcaption">
+                                                    <h4>新據點廣告/超勝整合行銷<br>粉絲團專頁</h4>
+                                                    <p>馬上加入我們的粉絲專頁</p>
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <a href="http://www.biz-mobileapps.com/occupy" target="_blank" class="gn-promo">
+                                            <div class="figure">
+                                                <h4 class="subject">新據點廣告APP</h4>
+                                                <div class="img">
+                                                    <img src="./build/images/occupyApp.jpg" alt="m1">
+                                                </div>
+
+                                                <div class="figcaption">
+                                                    <h4>新據點廣告APP下載</h4>
+                                                    <p>客製化活動內容、語音導覽、專業軟體管理、互動式媒動廣告托播 輕鬆打造多元商機</p>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </li>
+                    <li class="wow fadeInRight" data-wow-delay=".3s">
+                        <a class="menuToggle lv1Menu" href="#join">服務項目</a>
+
+                    </li>
+                    <li class="wow fadeInRight" data-wow-delay=".4s">
+                        <a class="menuToggle lv1Menu" href="#team">點位介紹</a>
+                        <div class="mddWrap" style="height: 400px;">
+                            <div class="mddInner mddInner--spot">
+                                <div class="spotIntro lv2Menu">
+                                    <div class="dFlex">
+                                        <div class="dFlexContainer">
+                                            <span>北部點位</span>
+                                            <ul>
+                                                <li><a href="#">信義區</a></li>
+                                                <li><a href="#">萬華區</a></li>
+                                                <li><a href="#">大安區</a></li>
+                                                <li><a href="#">中正區</a></li>
+                                                <li><a href="#">中山區</a></li>
+                                                <li><a href="#">內湖區</a></li>
+                                                <li><a href="#">士林區</a></li>
+                                                <li><a href="#">松山區</a></li>
+                                                <li><a href="#">五股區</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="dFlexContainer">
+                                            <span>中部點位</span>
+                                            <ul>
+                                                <li><a href="#">北區</a></li>
+                                                <li><a href="#">西區</a></li>
+                                                <li><a href="#">西屯區</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="dFlexContainer">
+                                            <span>南部點位</span>
+                                            <ul>
+                                                <li><a href="#">苓雅區</a></li>
+                                                <li><a href="#">新興區</a></li>
+                                                <li><a href="#">前金區</a></li>
+                                                <li><a href="#">左營區</a></li>
+                                                <li><a href="#">三民區</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="spotIntro lv2Menu">
+                                    <div class="dFlex">
+                                        <div class="dFlexContainer">
+                                            <span>商圈整合</span>
+                                            <ul>
+                                                <li><a href="#">信義商圈</a></li>
+                                                <li><a href="#">西門商圈</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="dFlexContainer dFlexContainer--mt20">
+                                            <span>國道高架</span>
+                                            <ul>
+                                                <li><a href="#">建國高架</a></li>
+                                                <li><a href="#">市民大道</a></li>
+                                                <li><a href="#">中山國道</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="spotIntro lv2Menu">
+                                    <div class="dFlex">
+                                        <div class="dFlexContainer">
+                                            <span>車體廣告</span>
+                                            <ul>
+                                                <li><a href="#">櫥窗燈箱車</a></li>
+                                                <li><a href="#">鷗翼燈箱車</a></li>
+                                                <li><a href="#">LED燈箱車</a></li>
+                                                <li><a href="#">3.5噸廣告車</a></li>
+                                                <li><a href="#">胖卡廣告車</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="spotIntro lv2Menu">
+                                    <div class="dFlex">
+                                        <div class="dFlexContainer">
+                                            <span>立體裝置物</span>
+                                            <ul>
+                                                <li><a href="#">經典得獎作品</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="dFlexContainer dFlexContainer--mt20">
+                                            <span>行銷活動</span>
+                                            <ul>
+                                                <li><a href="#">經典得獎作品</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="dFlexContainer dFlexContainer--mt20">
+                                            <span>活動場地</span>
+                                            <ul>
+                                                <li><a href="#">北部場地</a></li>
+                                                <li><a href="#">中部場地</a></li>
+                                                <li><a href="#">南部場地</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+
+                                </div>
+                                <div class="spotIntro lv2Menu">
+                                    <div class="dFlex">
+                                        <div class="dFlexContainer">
+                                            <span>LED數位看板</span>
+                                            <ul>
+                                                <li><a href="#">北部數位看板</a></li>
+                                                <li><a href="#">中部數位看板</a></li>
+                                                <li><a href="#">南部數位看板</a></li>
+                                                <li><a href="#">電影北區聯播</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><!-- /.mddInner -->
+                        </div><!-- /.mddWrap -->
+                    </li>
+                    <li class="wow fadeInRight" data-wow-delay=".5s">
+                        <a class="menuToggle lv1Menu" href="#video">成功案例</a>
+                        <div class="mddWrap" style="height: 460px;">
+                            <div class="mddInner">
+                                <div class="aboutOccupy">
+                                    <div class="options">
+                                        <div>
+                                            <a href='#' class='aniBtn buy-button'>
+                                                <span class='top content'><i class="fal fa-paper-plane fa-3x"></i></span>
+                                                <span class='bottom content'><i class="fal fa-paper-plane fa-3x"></i></span>
+                                            </a>
+
+                                            <a class="subTitle" href="#">電信通訊</a>
+                                        </div>
+                                        <div>
+                                            <a href='#' class='aniBtn buy-button'>
+                                                <span class='top content'><i class="fab fa-youtube-square fa-3x"></i></span>
+                                                <span class='bottom content'><i class="fab fa-youtube-square fa-3x"></i></span>
+                                            </a>
+
+                                            <a class="subTitle" href="#">影藝娛樂</a>
+                                        </div>
+                                        <div>
+                                            <a href='#' class='aniBtn buy-button'>
+                                                <span class='top content'><i class="fal fa-archway fa-3x"></i></span>
+                                                <span class='bottom content'><i class="fal fa-archway fa-3x"></i></span>
+                                            </a>
+
+                                            <a class="subTitle" href="#">建築空間</a>
+                                        </div>
+                                    </div>
+                                    <div class="options">
+                                        <div>
+                                            <a href='#' class='aniBtn buy-button'>
+                                                <span class='top content'><i class="fal fa-plane fa-3x"></i></span>
+                                                <span class='bottom content'><i class="fal fa-plane fa-3x"></i></span>
+                                            </a>
+                                            <a class="subTitle" href="#">觀光旅遊</a>
+                                        </div>
+                                        <div>
+                                            <a href='#' class='aniBtn buy-button'>
+                                                <span class='top content'><i class="fal fa-socks fa-3x"></i></span>
+                                                <span class='bottom content'><i class="fal fa-socks fa-3x"></i></span>
+                                            </a>
+                                            <a class="subTitle" href="#">精品服飾</a>
+                                        </div>
+                                        <div>
+                                            <a href='#' class='aniBtn buy-button'>
+                                                <span class='top content'><i class="fal fa-atom fa-3x"></i></span>
+                                                <span class='bottom content'><i class="fal fa-atom fa-3x"></i></span>
+                                            </a>
+                                            <a class="subTitle" href="#">科技家電</a>
+                                        </div>
+                                    </div>
+                                    <div class="options">
+                                        <div>
+                                            <a href='#' class='aniBtn buy-button'>
+                                                <span class='top content'><i class="fal fa-plus-square fa-3x"></i></span>
+                                                <span class='bottom content'><i class="fal fa-plus-square fa-3x"></i></span>
+                                            </a>
+
+                                            <a class="subTitle" href="#">美容保養</a>
+                                        </div>
+                                        <div>
+                                            <a href='#' class='aniBtn buy-button'>
+                                                <span class='top content'><i class="fal fa-gamepad fa-3x"></i></span>
+                                                <span class='bottom content'><i class="fal fa-gamepad fa-3x"></i></span>
+                                            </a>
+
+                                            <a class="subTitle" href="#">電玩遊戲</a>
+                                        </div>
+                                        <div>
+                                            <a href='#' class='aniBtn buy-button'>
+                                                <span class='top content'><i class="fal fa-credit-card fa-3x"></i></span>
+                                                <span class='bottom content'><i class="fal fa-credit-card fa-3x"></i></span>
+                                            </a>
+
+                                            <a class="subTitle" href="#">金融保險</a>
+                                        </div>
+                                    </div>
+                                    <div class="options">
+                                        <div>
+                                            <a href='#' class='aniBtn buy-button'>
+                                                <span class='top content'><i class="fal fa-golf-club fa-3x"></i></span>
+                                                <span class='bottom content'><i class="fal fa-golf-club fa-3x"></i></span>
+                                            </a>
+                                            <a class="subTitle" href="#">運動用品</a>
+                                        </div>
+                                        <div>
+                                            <a href='#' class='aniBtn buy-button'>
+                                                <span class='top content'><i class="fal fa-car-bus fa-3x"></i></span>
+                                                <span class='bottom content'><i class="fal fa-car-bus fa-3x"></i></span>
+                                            </a>
+
+                                            <a class="subTitle" href="#">交通運輸</a>
+                                        </div>
+                                        <div>
+                                            <a href='#' class='aniBtn buy-button'>
+                                                <span class='top content'><i class="fal fa-burger-soda fa-3x"></i></span>
+                                                <span class='bottom content'><i class="fal fa-burger-soda fa-3x"></i></span>
+                                            </a>
+
+                                            <a class="subTitle" href="#">食品飲料</a>
+                                        </div>
+                                    </div>
+                                    <div class="twoColumnFlexContainer">
+                                        <div class="gn-promos">
+                                            <a href="http://www.biz-mobileapps.com/occupy" target="_blank"
+                                               class="gn-promo gn-promo--250">
+                                                <div class="figure">
+                                                    <div class="img">
+                                                        <img src="./build/images/m5.jpg" alt="m1">
+                                                    </div>
+
+                                                    <div class="figcaption">
+                                                        <h4>縮時攝影</h4>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                            <a href="https://www.facebook.com/AD.OCCUPY" target="_blank"
+                                               class="gn-promo gn-promo--250">
+                                                <div class="figure">
+                                                    <div class="img">
+                                                        <img src="./build/images/m1.jpg" alt="m1">
+                                                    </div>
+
+                                                    <div class="figcaption">
+                                                        <h4>經典作品</h4>
+                                                    </div>
+                                                </div>
+                                            </a>
+
+                                        </div>
+                                        <div class="gn-promos">
+                                            <a href="https://www.facebook.com/AD.OCCUPY" target="_blank"
+                                               class="gn-promo gn-promo--250">
+                                                <div class="figure">
+                                                    <div class="img">
+                                                        <img src="./build/images/5.jpg" alt="m1">
+                                                    </div>
+
+                                                    <div class="figcaption">
+                                                        <h4>創意裝置藝術</h4>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                            <a href="http://www.biz-mobileapps.com/occupy" target="_blank"
+                                               class="gn-promo gn-promo--250">
+                                                <div class="figure">
+                                                    <div class="img">
+                                                        <img src="./build/images/m4.jpg" alt="m1">
+                                                    </div>
+
+                                                    <div class="figcaption">
+                                                        <h4>車體廣告</h4>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div><!-- /.mddInner -->
+                        </div><!-- /.mddWrap -->
+                    </li>
+                    <li class="wow fadeInRight" data-wow-delay=".6s">
+                        <a class="menuToggle lv1Menu" href="#video">最新上刊</a>
+                    </li>
+                    <li class="wow fadeInRight" data-wow-delay=".7s">
+                        <a class="menuToggle lv1Menu" href="#video">聯絡我們</a>
+
+                    </li>
+                    <li class="searchToggleBtn wow fadeInRight" data-wow-delay=".8s">
+                        <a href="#"><i class="fal fa-search"></i></a>
+                        <div class="mddWrap" style="height: 100px;">
+                            <div class="mddInner">
+                                <form class="navbar-form" role="search">
+                                    <div class="selection-group">
+                                        <p>點位搜尋：</p>
+                                        <select class="form-control" name="" id="lev1">
+                                            <option selected="selected" value="1">依媒體樣式查詢</option>
+                                            <option value="3">大樓彩妝</option>
+                                            <option value="3">廣告看板</option>
+                                            <option value="3">霓虹看板</option>
+                                            <option value="3">立體裝置</option>
+                                            <option value="3">車體廣告</option>
+                                            <option value="3">行銷活動</option>
+                                            <option value="3">場地資訊</option>
+                                            <option value="3">數位看板</option>
+                                        </select>
+                                        <select class="form-control" name="" id="lev2">
+                                            <option selected="selected" value="">請選分佈範圍</option>
+                                            <option value="U">北部</option>
+                                            <option value="R">中部</option>
+                                            <option value="G">南部</option>
+                                        </select>
+                                        <select class="form-control" name="" id="lev3">
+                                            <option selected="selected" value="">請選擇行政區</option>
+                                        </select>
+                                        <button type="button" class="btn btn-default" aria-haspopup="true"
+                                                aria-expanded="false">查詢
+                                        </button>
+                                    </div>
+                                    <div class="separateLine"></div>
+                                    <div class="input-group">
+                                        <input type="text" value="關鍵字搜尋" class="form-control" placeholder="關鍵字搜尋"
+                                               name="q" onfocus="if(this.value=='關鍵字搜尋') {this.value=''}"
+                                               onblur="if(this.value=='') {this.value='關鍵字搜尋'} ">
+                                        <div class="input-group-btn">
+                                            <button class="btn btn-default" type="submit"><i
+                                                    class="glyphicon glyphicon-search"></i></button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div><!-- /.mddInner -->
+                        </div><!-- /.mddWrap -->
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!--end of navigation bar for desktop-->
+        <div class="clearfix"></div>
+
+        <!--start of drawer navigation for mobile-->
+        <div class="mobile-nav-menu subMenu ani">
+
+            <div class="clearfix"></div>
+            <ul class="mobile-nav-menu-ul">
+                <!--li click   addClass active  -->
+                <li class="mobile-nav-menu-li-title-1">關於新據點</li>
+                <ul class="mobile-nav-menu-ul-2 animated fadeIn">
+                    <li class="mobile-nav-menu-li-title-2-link contentNO"><a href="#">關於我們</a></li>
+                    <li class="mobile-nav-menu-li-title-2-link contentNO"><a href="#">新據點粉絲團</a></li>
+                    <li class="mobile-nav-menu-li-title-2-link contentNO"><a href="#">最新消息</a></li>
+                    <li class="mobile-nav-menu-li-title-2-link contentNO"><a href="#">粉絲專頁</a></li>
+                    <li class="mobile-nav-menu-li-title-2-link contentNO"><a href="#">新據點廣告APP</a></li>
+                </ul>
+
+                <li class="mobile-nav-menu-li-title-1">服務項目</li>
+                <ul class="mobile-nav-menu-ul-2 animated fadeIn">
+                    <li class="mobile-nav-menu-li-title-2-link contentNO"><a href="#">上課教室</a></li>
+                    <li class="mobile-nav-menu-li-title-2-link contentNO"><a href="#">上課紀錄</a></li>
+                    <li class="mobile-nav-menu-li-title-2-link contentNO"><a href="#">我的權益明細</a></li>
+                </ul>
+
+                <li class="mobile-nav-menu-li-title-1">點位介紹</li>
+                <ul class="mobile-nav-menu-ul-2 animated fadeIn">
+                    <!--contentNO-->
+                    <li class="mobile-nav-menu-li-title-2">輸入學習卡號</li>
+                    <ul class="mobile-nav-menu-ul-3 animated fadeIn">
+                        <li class="mobile-nav-menu-li-link"><a href="#">APPLE學院</a></li>
+                        <li class="mobile-nav-menu-li-link"><a href="#">視覺設計學院</a></li>
+                        <li class="mobile-nav-menu-li-link"><a href="#">CAD設計學院</a></li>
+                        <li class="mobile-nav-menu-li-link"><a href="#">3D動畫學院</a></li>
+                        <li class="mobile-nav-menu-li-link"><a href="#">程式資料庫學院</a></li>
+                        <li class="mobile-nav-menu-li-link"><a href="#">網路管理學院</a></li>
+                        <li class="mobile-nav-menu-li-link"><a href="#">Office學院</a></li>
+                        <li class="mobile-nav-menu-li-link"><a href="#">資訊素養學院</a></li>
+                        <li class="mobile-nav-menu-li-link"><a href="#">資訊技能學院</a></li>
+                        <li class="mobile-nav-menu-li-link"><a href="#">自製教材學院</a></li>
+                        <li class="mobile-nav-menu-li-link"><a href="#">自由軟體學院</a></li>
+                        <li class="mobile-nav-menu-li-link"><a href="#">綜合基礎學院</a></li>
+                    </ul>
+                    <li class="mobile-nav-menu-li-title-2-link contentNO"><a href="#">完成開卡</a></li>
+                </ul>
+
+                <li class="mobile-nav-menu-li-title-1">成功案例</li>
+                <ul class="mobile-nav-menu-ul-2 animated fadeIn">
+                    <li class="mobile-nav-menu-li-title-2-link contentNO"><a href="#">我要購買</a></li>
+                    <li class="mobile-nav-menu-li-title-2-link contentNO"><a href="#">學習卡簡介</a></li>
+                </ul>
+
+                <li class="mobile-nav-menu-li-title-1">最新上刊</li>
+                <ul class="mobile-nav-menu-ul-2 animated fadeIn">
+                    <li class="mobile-nav-menu-li-title-2-link"><a href="#">我的權益明細</a></li>
+                    <li class="mobile-nav-menu-li-title-2-link"><a href="#">修改資料及密碼</a></li>
+                    <li class="mobile-nav-menu-li-title-2-link"><a href="#">網站品質調查</a></li>
+                </ul>
+
+                <li class="mobile-nav-menu-li-title-1">聯絡我們</li>
+                <ul class="mobile-nav-menu-ul-2 animated fadeIn">
+                    <li class="mobile-nav-menu-li-title-2">常見問題</li>
+                    <ul class="mobile-nav-menu-ul-3 animated fadeIn">
+                        <li class="mobile-nav-menu-li-link"><a href="#">購卡問題</a></li>
+                        <li class="mobile-nav-menu-li-link"><a href="#">開卡問題</a></li>
+                        <li class="mobile-nav-menu-li-link"><a href="#">課程問題</a></li>
+                        <li class="mobile-nav-menu-li-link"><a href="#">權益問題</a></li>
+                        <li class="mobile-nav-menu-li-link"><a href="#">課程轉換</a></li>
+                        <li class="mobile-nav-menu-li-link"><a href="#">系統問題</a></li>
+                        <li class="mobile-nav-menu-li-link"><a href="#">其它問題</a></li>
+                    </ul>
+                    <li class="mobile-nav-menu-li-title-2">服務簡介</li>
+                    <ul class="mobile-nav-menu-ul-3 animated fadeIn">
+                        <li class="mobile-nav-menu-li-link"><a href="#">服務簡介</a></li>
+                        <li class="mobile-nav-menu-li-link"><a href="#">學習特色</a></li>
+                        <li class="mobile-nav-menu-li-link"><a href="#">課程特色</a></li>
+                    </ul>
+                    <li class="mobile-nav-menu-li-title-2-link contentNO"><a href="#">意見反應</a></li>
+                </ul>
+
+
+                <div class="clearfix"></div>
+
+            </ul>
+        </div>
+        <!--end of drawer navigation for mobile-->
+
+        <!--course search bar-->
+        <section class="spotSearch" id="spotSearchBar">
+            <ul>
+                <li>
+                    <div class="input-group">
+                        <input type="text" value="關鍵字搜尋" class="form-control" placeholder="關鍵字搜尋"
+                               name="q" onfocus="if(this.value=='關鍵字搜尋') {this.value=''}"
+                               onblur="if(this.value=='') {this.value='關鍵字搜尋'} ">
+                        <div class="input-group-btn">
+                            <button class="btn btn-default" type="submit"><i
+                                    class="glyphicon glyphicon-search"></i></button>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </section>
+        <!--end of course search bar-->
+
+        <!--header-->
+        <div class="container">
+            <div class="row">
+                <header>
+                    <div id="bannerCarousel">
+                        <div class="banner">
+                            <img class="img-responsive" src="./build/images/2018121910525076.jpg" alt="">
+                        </div>
+                        <div class="banner">
+                            <img class="img-responsive" src="./build/images/2018121910531276.jpg" alt="">
+                        </div>
+                        <div class="banner">
+                            <img class="img-responsive" src="./build/images/2018121910532977.jpg" alt="">
+                        </div>
+                        <div class="banner">
+                            <img class="img-responsive" src="./build/images/2018121910535920.jpg" alt="">
+                        </div>
+                        <div class="banner">
+                            <img class="img-responsive" src="./build/images/2018121910534694.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="clearfix"></div>
+                </header>
+            </div>
+        </div>
+        <!--end of header-->
+
+        <!--最新影音-->
+        <section class="newest-videos" id="video">
+            <div class="container">
+                <div class="row">
+                    <div class="section-title">
+                        最新影音
+                        <div class="bar"></div>
+                    </div>
+                    <div class="videos">
+                        <div class="video">
+                            <a href="https://youtu.be/lu8X6q7NK0Y?autoplay=1" class="venobox" data-type="youtube"
+                               data-gall="gall-video">
+                                <div class="video-img"
+                                     style="background-image: url(./build/images/26.jpg)">
+                                    <i class="fab fa-youtube fa-3x"></i>
+                                </div>
+                            </a>
+                            <div class="video-content">
+                                <div class="video-subject">2017年uber最新戶外廣告</div>
+                            </div>
+
+                        </div>
+                        <div class="video">
+                            <a href="https://youtu.be/P9T4I4Nwlok?autoplay=1" class="venobox" data-type="youtube"
+                               data-gall="gall-video">
+                                <div class="video-img"
+                                     style="background-image: url(./build/images/65.jpg)">
+                                    <i class="fab fa-youtube fa-3x"></i>
+                                </div>
+                            </a>
+                            <div class="video-content">
+                                <div class="video-subject">Try It!純喫茶</div>
+                            </div>
+
+                        </div>
+                        <div class="video">
+                            <a href="https://youtu.be/xW-FWMjJHj0?autoplay=1" class="venobox" data-type="youtube"
+                               data-gall="gall-video">
+                                <div class="video-img"
+                                     style="background-image: url(./build/images/9.jpg)">
+                                    <i class="fab fa-youtube fa-3x"></i>
+                                </div>
+                            </a>
+                            <div class="video-content">
+                                <div class="video-subject">17直播電視牆戶外廣告</div>
+                            </div>
+
+                        </div>
+                        <div class="video">
+                            <a href="https://youtu.be/8z2EAp3E04k?autoplay=1" class="venobox" data-type="youtube"
+                               data-gall="gall-video">
+                                <div class="video-img"
+                                     style="background-image: url(./build/images/87.jpg)">
+                                    <i class="fab fa-youtube fa-3x"></i>
+                                </div>
+                            </a>
+                            <div class="video-content">
+                                <div class="video-subject">2017台灣代駕</div>
+                            </div>
+
+                        </div>
+                        <div class="video">
+                            <a href="https://youtu.be/KOXEljZvve0?autoplay=1" class="venobox" data-type="youtube"
+                               data-gall="gall-video">
+                                <div class="video-img"
+                                     style="background-image: url(./build/images/68.jpg)">
+                                    <i class="fab fa-youtube fa-3x"></i>
+                                </div>
+                            </a>
+                            <div class="video-content">
+                                <div class="video-subject">2017 1月份西門WIFI(陰陽師)</div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+        <!--end of 最新影音-->
+
+        <!--成功案例-->
+        <section class="sampleSec">
+            <div class="container">
+                <div class="row">
+                    <div class="section-title">
+                        成功案例
+                        <div class="bar"></div>
+                    </div>
+                    <div class="samples">
+                        <div class="sample">
+                            <a href="https://youtu.be/FfpRfX_wERk?autoplay=1" class="venobox" data-type="youtube"
+                               data-gall="gall-video">
+                                <div class="sample-img"
+                                     style="background-image: url(https://via.placeholder.com/300)">
+                                </div>
+                            </a>
+                            <div class="sample-content">
+                                <div class="sample-subject">17直播電視牆戶外廣告</div>
+                            </div>
+
+                        </div>
+                        <div class="sample">
+                            <a href="https://youtu.be/FfpRfX_wERk?autoplay=1" class="venobox" data-type="youtube"
+                               data-gall="gall-video">
+                                <div class="sample-img"
+                                     style="background-image: url(https://via.placeholder.com/300)">
+                                </div>
+                            </a>
+                            <div class="sample-content">
+                                <div class="sample-subject">17直播電視牆戶外廣告</div>
+                            </div>
+
+                        </div>
+                        <div class="sample">
+                            <a href="https://youtu.be/FfpRfX_wERk?autoplay=1" class="venobox" data-type="youtube"
+                               data-gall="gall-video">
+                                <div class="sample-img"
+                                     style="background-image: url(https://via.placeholder.com/300)">
+                                </div>
+                            </a>
+                            <div class="sample-content">
+                                <div class="sample-subject">17直播電視牆戶外廣告</div>
+                            </div>
+
+                        </div>
+                        <div class="sample">
+                            <a href="https://youtu.be/FfpRfX_wERk?autoplay=1" class="venobox" data-type="youtube"
+                               data-gall="gall-video">
+                                <div class="sample-img"
+                                     style="background-image: url(https://via.placeholder.com/300)">
+                                </div>
+                            </a>
+                            <div class="sample-content">
+                                <div class="sample-subject">17直播電視牆戶外廣告</div>
+                            </div>
+
+                        </div>
+                        <div class="sample">
+                            <a href="https://youtu.be/FfpRfX_wERk?autoplay=1" class="venobox" data-type="youtube"
+                               data-gall="gall-video">
+                                <div class="sample-img"
+                                     style="background-image: url(https://via.placeholder.com/300)">
+                                </div>
+                            </a>
+                            <div class="sample-content">
+                                <div class="sample-subject">17直播電視牆戶外廣告</div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+        </section>
+        <!--end of 成功案例-->
+
+        <!--FB Link-->
+        <div class="fbLink">
+            <div class="container">
+                <div class="row">
+                    <div class="d-flex">
+                        <img class="img-responsive" src="build/images/fb.jpg" alt="">
+                        <img class="img-responsive" src="build/images/fb2.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--end of FB Link-->
+
+        <footer>
+            <div class="container">
+                <div class="d-flex">
+                    <p>新據點廣告 版權所有 © 2015 OCCUPY TAIWAN ALL RIGHTS RESERVED.</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+</div>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/3.0.1/jquery-migrate.min.js"></script>
+<script type="application/javascript"
+        src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.4.2/handlebars.min.js"
+        integrity="sha256-oh7N5nthuhldTk8/34Za7FXv3BkeVN9vAnYk/pLfC78=" crossorigin="anonymous"></script>
+<script type="application/javascript" src="build/js/templates.js"></script>
+<script type="application/javascript" src="build/js/venobox.min.js"></script>
+<script type="application/javascript" src="http://localhost:35729/livereload.js"></script>
+<script type="application/javascript" src="build/js/scripts.min.js"></script>
+
+</body>
+</html>

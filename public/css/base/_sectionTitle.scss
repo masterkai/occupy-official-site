@@ -1,0 +1,12 @@
+.section-title {
+  max-width: 1160px;
+  margin: 0 auto;
+  font-size: 1.4rem;
+  @include breakpoint($ipad){
+    text-align: center;
+  }
+  .bar {
+    border-bottom: 1px solid $color_deep-gray;
+    margin-top: 8px;
+  }
+}

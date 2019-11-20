@@ -1,0 +1,47 @@
+.newest-videos {
+  @include breakpoint($ipad) {
+    margin-top: 15px;
+  }
+
+  .locationsNav {
+    max-width: 1170px;
+    overflow: hidden;
+    margin: 0 auto;
+    display: flex;
+
+    .locationNav {
+      padding: 20px 10px 0;
+      flex: 1 1 25%;
+
+      @include breakpoint($ipad) {
+        margin: 0;
+        padding: 0;
+      }
+
+      .locationNav-img {
+        background-position: center center;
+        background-size: cover;
+        height: 200px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        svg {
+          color: rgba($color_white, .7)
+        }
+
+        &:hover {
+          svg {
+            color: rgba($color_white, 1)
+          }
+        }
+      }
+
+      .locationNav-content {
+        display: flex;
+        justify-content: center;
+        padding: 10px;
+      }
+    }
+  }
+}

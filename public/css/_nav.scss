@@ -1,0 +1,539 @@
+.navFlexContainer {
+  &.shrink {
+    height: 50px;
+  }
+
+  max-width: 1160px;
+  height: 73px;
+  width: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  position: fixed;
+  z-index: 100;
+  background-color: $color_occupy;
+  display: flex;
+  justify-content: space-around;
+  transition: all .3s ease-in-out;
+  @include breakpoint($nav_mobile) {
+    width: 100%;
+  }
+
+  .navbar-brand {
+    &.shrink {
+      height: 50px;
+    }
+
+    transition: all .3s ease-in-out;
+    height: 73px;
+    background-color: $color_occupy_logo;
+    display: flex;
+    align-items: center;
+    padding: 15px;
+
+    .openBtn {
+      cursor: pointer;
+    }
+
+    svg {
+      color: #fff;
+      cursor: pointer;
+      display: none;
+      @include breakpoint($nav_mobile) {
+        display: block;
+      }
+    }
+
+    img {
+      &.shrink {
+        width: 100px;
+      }
+
+      &:hover {
+        cursor: pointer;
+      }
+
+      transition: all .3s ease-in-out;
+      width: 150px;
+
+    }
+
+    @include breakpoint($nav_mobile) {
+      width: 100%;
+      flex: 1 1 100%;
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  .navbar-nav {
+    flex: 1 1 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include breakpoint($nav_mobile) {
+      display: none;
+    }
+
+    .menuContainer {
+      flex: 1 1 100%;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+
+      .searchToggleBtn {
+        .mddWrap {
+          .mddInner {
+            padding: 0 20px;
+            height: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .navbar-form {
+              width: 100%;
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+
+              .separateLine {
+                flex: 1 1 1px;
+                width: 1px;
+                height: 40px;
+              }
+
+              .selection-group {
+                select {
+                  height: 42px;
+                }
+
+                .btn {
+                  height: 42px;
+                }
+
+                flex: 1 1 50%;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+              }
+
+              .input-group {
+                flex: 1 1 45%;
+                //width: 100%;
+
+                .form-control {
+                  padding: 20px;
+                }
+
+                .input-group-btn {
+                  width: 1px;
+
+                  .btn {
+                    padding: 10px;
+                  }
+                }
+              }
+            }
+
+          }
+        }
+      }
+
+      & > li {
+        &.shrink {
+          height: 50px;
+        }
+
+        &:last-child {
+          border-right: none;
+        }
+
+        border-right: 1px solid lighten($color_readMoreBtn, 15%);
+        transition: all .3s ease-in-out;
+        height: 73px;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &:hover {
+          background-color: #1b1b1b;
+        }
+      }
+
+      li {
+        flex: 1 1 calc(100% / 7);
+
+        a {
+          color: #fff;
+        }
+      }
+
+    }
+
+    .mddWrap {
+      &.shrink {
+        top: 50px;
+      }
+
+      transition: all .3s ease-in-out;
+      top: 73px;
+      opacity: 0;
+      left: 0;
+      width: 1160px;
+      height: 0;
+      text-align: center;
+      background: #fff;
+      background: linear-gradient(to bottom, #fff 0%, #efefef 100%);
+      border-bottom: #aaa 1px solid;
+      position: absolute;
+      z-index: 10;
+      overflow: hidden;
+      display: none;
+      box-shadow: 0 2px 2px #eee;
+
+      .mddInner {
+        .aboutOccupy {
+          &--adjust {
+            margin-left: 150px;
+          }
+
+          margin-left: 65px;
+          display: flex;
+          justify-content: space-between;
+
+          .options {
+            &--about {
+              display: block;
+              justify-content: flex-start;
+              align-items: center;
+
+              div {
+                a {
+                  transition: all .3s ease-out;
+                  color: $color_fontColor;
+                  position: relative;
+                  font-weight: 200;
+                  font-size: 15px;
+                }
+
+                &:hover {
+                  a {
+                    margin-left: 15px;
+                    text-decoration: none;
+
+                    &:before {
+                      display: block;
+                      content: url('../images/chevron-double-right-light.svg');
+                      position: absolute;
+                      left: -14px;
+                      max-width: 10px;
+                      width: 10px;
+                      font-size: 15px;
+                    }
+                  }
+                }
+
+                padding: 10px;
+                width: 200px;
+
+                &:first-child {
+                  border-top: 1px solid lighten($color_fontColor, 20%);
+                }
+
+                border-bottom: 1px solid lighten($color_fontColor, 20%);
+              }
+            }
+
+            flex-basis: 25%;
+            display: flex;
+            flex-flow: column;
+            justify-content: space-between;
+            align-items: stretch;
+
+            div {
+              display: flex;
+              flex-flow: column;
+              justify-content: center;
+              align-items: center;
+              &:hover {
+                svg {
+                  color: $color_deep-gray;
+                }
+              }
+
+              svg {
+                color: lighten($color_fontColor, 23%);
+                margin: 12px auto 15px;
+              }
+
+              a {
+                color: #000;
+              }
+
+              .subTitle {
+                color: $color_occupy;
+              }
+
+              p.desc {
+                font-size: 12px;
+                line-height: 1.5;
+              }
+
+              height: auto;
+              flex: 0 0 120px;
+              transition: all .1s ease-in-out;
+            }
+          }
+
+          .line {
+            background-color: #888;
+            width: 1px;
+            margin-right: 10px;
+            margin-left: 20px;
+          }
+
+          .twoColumnFlexContainer {
+
+          }
+
+          .gn-promos {
+            &--750 {
+              flex-direction: row;
+            }
+
+            display: flex;
+            flex: 0 1 500px;
+
+            .gn-promo {
+
+              &:hover {
+                img {
+                  transform: scale(1.2);
+                }
+              }
+
+              &--250 {
+                width: 250px;
+              }
+
+              flex: 0 1 33.33%;
+              padding: 0 15px 10px;
+              //border: 1px solid red;
+
+              .figure {
+                display: flex;
+                flex-direction: column;
+
+                .img {
+                  img {
+                    transition: all .3s ease-in-out;
+                  }
+
+                  width: 215px;
+                  height: 167px;
+                  overflow: hidden;
+                }
+
+                h4.subject {
+                  margin-bottom: 10px;
+                  text-align: left;
+                  color: #000;
+                }
+
+                .figcaption {
+                  h4 {
+                    color: $color_occupy;
+                    font-size: 1.0rem;
+                    text-align: left;
+                  }
+
+                  p {
+                    line-height: 1.375;
+                    text-align: left;
+                    color: #000;
+                    font-size: smaller;
+                  }
+                }
+              }
+            }
+          }
+        }
+
+        p {
+          strong {
+            font-size: 1.1em;
+            display: block;
+          }
+        }
+
+        margin: 0 auto;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        padding-left: 30px;
+        padding-right: 0;
+        width: 100%;
+        line-height: 1.5em;
+
+        &--spot {
+          padding-left: 179.148px;
+          padding-right: 140.25px;
+          display: flex;
+          justify-content: space-between;
+
+          & > .spotIntro {
+            flex-grow: 1;
+            border-left: 1px solid lighten($color_fontColor, 20%);
+
+            &:first-child {
+              flex-grow: 0;
+              flex-basis: 240px;
+
+              .dFlex {
+                justify-content: space-evenly;
+
+                .dFlexContainer {
+                  //flex-grow: 1;
+                }
+              }
+            }
+
+            &:nth-child(2) {
+              flex-basis: 130px;
+
+              .dFlex {
+                flex-flow: column;
+
+                .dFlexContainer {
+                  flex-grow: 1;
+                }
+              }
+            }
+
+            &:nth-child(3) {
+              flex-basis: 151px;
+
+              .dFlex {
+                justify-content: center;
+                flex-flow: column;
+
+                .dFlexContainer {
+                  flex-grow: 1;
+                }
+              }
+            }
+
+            &:nth-child(4) {
+              flex-basis: 160px;
+
+              .dFlex {
+                flex-flow: column;
+
+                .dFlexContainer {
+                  flex-grow: 1;
+                }
+              }
+            }
+
+            &:nth-child(5) {
+              border-right: 1px solid lighten($color_fontColor, 20%);
+              flex-basis: 161px;
+
+              .dFlex {
+                flex-flow: column;
+                justify-content: center;
+
+                .dFlexContainer {
+
+                }
+              }
+            }
+
+            .dFlex {
+              display: flex;
+
+              .dFlexContainer {
+                &--mt20 {
+                  margin-top: 20px;
+                }
+
+                display: flex;
+                flex-direction: column;
+
+                span {
+                  margin-bottom: 5px;
+                  font-size: 15px;
+                  font-weight: 300;
+                  color: $color_occupy;
+                }
+
+                ul {
+                  li {
+                    margin-top: 6px;
+
+                    a {
+                      position: relative;
+                      font-weight: 200;
+                      font-size: 15px;
+                      color: $color_fontColor;
+                      transition: all .3s ease-out;
+
+                      &:hover {
+                        margin-left: 15px;
+                        text-decoration: none;
+
+                        &:before {
+                          display: block;
+                          content: url('../images/chevron-double-right-light.svg');
+                          position: absolute;
+                          left: -14px;
+                          top: -3px;
+                          max-width: 10px;
+                          width: 10px;
+                          font-size: 15px;
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+
+
+        & > div {
+          span {
+            margin-bottom: 5px;
+            font-weight: bold;
+          }
+
+          &:last-child {
+            margin-right: 0;
+            border-right: none;
+          }
+        }
+
+      }
+
+      .mddInner > div > ul > li {
+        a {
+          color: #1b1b1b;
+
+          &:link {
+            text-decoration: none;
+          }
+
+          &:hover {
+            text-decoration: none;
+          }
+        }
+
+        font-size: 0.8em;
+        line-height: 1.8em;
+      }
+
+    }
+
+
+  }
+}

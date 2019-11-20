@@ -1,0 +1,28 @@
+a[href^="http://maps.google.com/maps"]{display:none !important}
+a[href^="https://maps.google.com/maps"]{display:none !important}
+
+.gmnoprint a, .gmnoprint span, .gm-style-cc {
+  display:none;
+}
+.gmnoprint div {
+  background:none !important;
+  display: none;
+}
+.gm-fullscreen-control {
+  display: none;
+}
+
+.map-container {
+  position: relative;
+  overflow: hidden;
+}
+.map-container:before, .map-container:after, #map:before, #map:after {
+  content: '';
+  position: absolute;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+  z-index: 1;
+}
+.map-container:before { top: -5px; left: 0; right: 0; height: 5px; }
+.map-container:after { right: -5px; top: 0; bottom: 0; width: 5px; }
+#map:before { bottom: -5px; left: 0; right: 0; height: 5px; }
+#map:after { left: -5px; top: 0; bottom: 0; width: 5px; }

@@ -1,0 +1,41 @@
+.aniBtn {
+  border: 0;
+  color: #FFF;
+  display: flex;
+  justify-content: center;
+  font-weight: bold;
+  height: $btnSize;
+  width: $btnSize;
+  transition: all .4s;
+  position: relative;
+  overflow: hidden;
+
+  span.content {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    transition: all .3s;
+  }
+
+  .content {
+    position: absolute;
+  }
+
+  .top.content {
+    top: 0;
+  }
+
+  .bottom.content {
+    top: $btnSize;
+  }
+
+  &:hover {
+    .top {
+      top: -$btnSize;
+    }
+
+    .bottom {
+      top: 0;
+    }
+  }
+}

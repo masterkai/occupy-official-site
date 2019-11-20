@@ -1,0 +1,86 @@
+header {
+  &.bannerCarousel--location {
+    max-width: $locationInfoWidth;
+    overflow: hidden;
+    margin: 0 auto;
+    display: flex;
+    flex-flow: row;
+    position: relative;
+
+    .expandBtn {
+      svg {
+        padding: 4px;
+        color: $color_fontColor;
+      }
+
+      padding: 4px;
+      background-color: $color_white;
+      position: absolute;
+      z-index: 10;
+      top: 38px;
+      right: 10px;
+      cursor: pointer;
+    }
+
+    .carouselBox {
+      display: flex;
+      flex-direction: column;
+      max-width: calc(100% - 30%);
+      margin: 28px 0 50px;
+      height: $mapHeight;
+
+      &.disappear {
+        width: 0;
+      }
+
+      .locationCarousel {
+        .slick-track {
+          width: 720px;
+          height: auto;
+        }
+
+        .slick-dots {
+          //bottom: 0;
+        }
+
+        &:first-child {
+          visibility: visible;
+          height: auto;
+        }
+
+        height: 0;
+        visibility: hidden;
+
+        button {
+          &.disappear {
+            visibility: hidden;
+          }
+        }
+
+
+      }
+    }
+
+
+    .map-container {
+      &.fullWidth {
+        width: 100%;
+      }
+
+      .map {
+        height: $mapHeight;
+      }
+
+      margin-top: 28px;
+      width: calc(30%);
+      height: $mapHeight;
+    }
+  }
+
+  #bannerCarousel {
+    margin: 63px 5px 30px;
+    @include breakpoint($ipad) {
+      margin: 63px 0 0;
+    }
+  }
+}

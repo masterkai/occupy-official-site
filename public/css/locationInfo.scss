@@ -1,0 +1,92 @@
+.locationInfo {
+  max-width: $locationInfoWidth;
+  overflow: hidden;
+  margin: 0 auto 30px;
+  display: flex;
+  justify-content: space-between;
+  transition: opacity .3s ease-in;
+  @include breakpoint(max-width 993px) {
+    flex-direction: column;
+  }
+
+  .mainInfo {
+    @include breakpoint(max-width 993px) {
+      flex-basis: auto;
+      margin-bottom: 10px;
+      padding: 10px;
+    }
+    flex-basis: 520px;
+
+    .locationTitle {
+      span {
+        font-weight: 100;
+        color: $color_occupy;
+        font-size: 1.798125rem;
+      }
+
+      .separateLine {
+        height: 20px;
+        margin: 0 20px;
+      }
+
+      svg.svg-inline--fa {
+        width: .8em !important;
+        color: $color_fontColor;
+        cursor: pointer;
+        margin-right: 10px;
+      }
+
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+
+    .mainInfo_desc {
+      color: $color_fontColor;
+      text-align: justify;
+
+      p {
+        font-weight: 100;
+
+      }
+
+      span {
+        font-weight: 600;
+        color: $color_occupy;
+      }
+
+      font-size: $standardFontSize;
+      line-height: 1.6;
+    }
+  }
+
+  .infoList {
+    margin-left: 40px;
+    flex-basis: 420px;
+    @include breakpoint(max-width 993px) {
+      margin-left: 0;
+      padding: 10px;
+    }
+
+    .list {
+      text-indent: -5em;
+      margin-left:5em;
+      line-height: 1.5;
+      margin-bottom: 10px;
+      font-weight: 100;
+      color: $color_fontColor;
+      font-size: $standardFontSize;
+
+      span {
+        font-weight: 600;
+        color: $color_occupy;
+      }
+    }
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: stretch;
+  }
+}
+

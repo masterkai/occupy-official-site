@@ -1,0 +1,95 @@
+.slick-track {
+  display: flex;
+
+  .slick-slide {
+    display: flex;
+    justify-content: space-between;
+    height: auto;
+    flex-direction: column;
+  }
+}
+
+.slick-list:focus {
+  outline: none;
+}
+
+.slick-slider {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-touch-callout: none;
+  -khtml-user-select: none;
+  -ms-touch-action: pan-y;
+  touch-action: pan-y;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.slick-prev {
+  @include breakpoint($ipad){
+    width: 25px;
+  }
+  position: absolute;
+  left: 0;
+  height: 60px;
+  width: 40px;
+  transform: translateY($Ypos);
+  z-index: 80;
+
+  &:before {
+    @include breakpoint($ipad){
+      font-size: 20px;
+      padding: 5px;
+    }
+    display: block;
+    color: $color_white;
+    font-size: 40px;
+    content: '\f104';
+    font-family: fontawesome;
+    padding: 10px;
+    background-color: black;
+  }
+}
+
+.slick-next {
+  @include breakpoint($ipad){
+    width: 25px;
+  }
+  position: absolute;
+  right: 0;
+  height: 60px;
+  width: 40px;
+  transform: translateY($Ypos);
+  z-index: 80;
+
+  &:before {
+    @include breakpoint($ipad){
+      font-size: 20px;
+      padding: 5px;
+    }
+    display: block;
+    color: $color_white;
+    font-size: 40px;
+    content: '\f105';
+    font-family: fontawesome;
+    padding: 10px;
+    background-color: black;
+  }
+}
+
+.slick-dots li button:before {
+  font-size: 8px;
+  color: $color_slickDots;
+  opacity: 1;
+}
+
+.slick-dots li.slick-active button:before {
+  font-size: 8px;
+  color: $color_slickDotsActive;
+}
+.slick-dots li {
+  margin: 0;
+}
+.slick-dots {
+  margin-top: 10px;
+}
