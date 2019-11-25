@@ -10,10 +10,27 @@
 }
 
 .slick-list:focus {
-  outline: none;
+  outline: none!important;
 }
-
+$bigger: 1.4;
 .slick-slider {
+  overflow: hidden;
+  &:hover {
+    .slick-prev {
+      opacity: 1;
+      left: 0;
+      z-index: 80;
+      transform: scale($bigger);
+      transform-origin: center;
+    }
+    .slick-next {
+      opacity: 1;
+      right: 0;
+      z-index: 80;
+      transform: scale($bigger);
+      transform-origin: center;
+    }
+  }
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -24,17 +41,19 @@
   touch-action: pan-y;
   -webkit-tap-highlight-color: transparent;
 }
-
+$hideDistance: -1200;
 .slick-prev {
   @include breakpoint($ipad){
     width: 25px;
   }
   position: absolute;
-  left: 0;
+  opacity: 0;
+  left: $hideDistance;
   height: 60px;
   width: 40px;
-  transform: translateY($Ypos);
-  z-index: 80;
+  transform: scale(.8);
+  transition: all .25s ease;
+  z-index: -10;
 
   &:before {
     @include breakpoint($ipad){
@@ -55,12 +74,14 @@
   @include breakpoint($ipad){
     width: 25px;
   }
+  transition: all .25s ease;
   position: absolute;
-  right: 0;
+  opacity: 0;
+  right: $hideDistance;
   height: 60px;
   width: 40px;
-  transform: translateY($Ypos);
-  z-index: 80;
+  transform: scale(.8);
+  z-index: -10;
 
   &:before {
     @include breakpoint($ipad){
@@ -91,5 +112,13 @@
   margin: 0;
 }
 .slick-dots {
-  margin-top: 10px;
+  bottom: 8px;
+}
+
+.slick-list {
+  outline: none !important;
+}
+
+.slick-slide {
+  outline: none !important;
 }

@@ -1,25 +1,27 @@
-.newest-videos {
+.success {
   @include breakpoint($ipad) {
     margin-top: 15px;
   }
 
-  .locationsNav {
+  .successNav {
     max-width: 1170px;
     overflow: hidden;
     margin: 0 auto;
     display: flex;
+    flex-wrap: wrap;
 
 
-    .locationNav {
+    .successItem {
+      cursor: pointer;
       padding: 20px 10px 0;
-      flex: 1 1 25%;
+      flex: 0 1 25%;
 
       @include breakpoint($ipad) {
         margin: 0;
         padding: 0;
       }
 
-      .locationNav-img {
+      .successItem-img {
         background-position: center center;
         background-size: cover;
         height: 200px;
@@ -38,10 +40,14 @@
         }
       }
 
-      .locationNav-content {
+      .successItem-content {
         display: flex;
         justify-content: center;
         padding: 10px;
+
+        .successItem-subject {
+          color: $color_occupy;
+        }
       }
     }
   }

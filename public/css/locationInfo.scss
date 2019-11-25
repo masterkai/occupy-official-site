@@ -8,6 +8,9 @@
   @include breakpoint(max-width 993px) {
     flex-direction: column;
   }
+  @include breakpoint($iphone){
+    margin: 0 auto;
+  }
 
   .mainInfo {
     @include breakpoint(max-width 993px) {
@@ -66,13 +69,18 @@
     @include breakpoint(max-width 993px) {
       margin-left: 0;
       padding: 10px;
+
+    }
+    @include breakpoint($iphone){
+      height: auto;
+      max-height: 200px;
     }
 
     .list {
       text-indent: -5em;
       margin-left:5em;
-      line-height: 1.5;
-      margin-bottom: 10px;
+      line-height: 2;
+      margin-bottom: 0;
       font-weight: 100;
       color: $color_fontColor;
       font-size: $standardFontSize;

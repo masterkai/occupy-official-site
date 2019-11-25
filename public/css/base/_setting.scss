@@ -33,6 +33,7 @@ $Ypos: -50%;
 /* breakpoints setting */
 $nav_mobile: max-width 1150px;
 $ipad: max-width 768px;
+$iphone: max-width 550px;
 
 /* animation for moving mainContents */
 .ani {
@@ -72,11 +73,17 @@ html {
 $btnSize: 75px;
 $standardFontSize: 0.9375rem;
 $locationInfoWidth: 976px;
-$mapHeight: 456px;
+$mapHeight: 480px;
 
 .separateLine {
   width: 1px;
   height: auto;
   background-color: lighten($color_fontColor, 30%);
   margin: 0 40px;
+}
+
+.separateLineHorizontal {
+  height: 1px;
+  width: 100%;
+  background-color: lighten($color_fontColor, 30%);
 }

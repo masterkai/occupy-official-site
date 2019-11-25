@@ -7,17 +7,43 @@
   border-bottom: 1px solid lighten($color_fontColor, 30%);
 
   .filter-panel-container {
+    &__success {
+      .separateLine {
+        margin: 0 20px;
+      }
+    }
+    &__latestRelease {
+      .separateLine {
+        margin: 0 20px;
+      }
+    }
+
     display: flex;
 
-
     .recommend-container {
-      @include breakpoint($ipad){
+      @include breakpoint($ipad) {
         flex-wrap: wrap;
         justify-content: center;
       }
       display: flex;
       justify-content: space-around;
       align-items: center;
+
+      &__latestRelease {
+        .month {
+          &.active {
+            color: $color_occupy;
+            background-color: unset;
+          }
+          &:last-child {
+            padding-right: 0;
+          }
+          padding-right: 15px;
+          color: $color_fontColor;
+          cursor: pointer;
+        }
+      }
+
       select {
         -webkit-writing-mode: horizontal-tb !important;
         text-rendering: auto;
@@ -43,6 +69,7 @@
         border-style: solid;
         border-color: rgb(166, 166, 166);
         border-image: initial;
+
         option {
           font-size: $standardFontSize;
           color: $color_fontColor;
@@ -50,7 +77,7 @@
       }
 
       span {
-        @include breakpoint($ipad){
+        @include breakpoint($ipad) {
           padding: 0;
         }
         color: $color_occupy;
@@ -63,26 +90,29 @@
     .filter-tag {
       display: flex;
       align-items: center;
-      @include breakpoint($ipad){
+      @include breakpoint($ipad) {
         flex-wrap: wrap;
         justify-content: center;
       }
 
       span {
-        @include breakpoint($ipad){
+        @include breakpoint($ipad) {
           padding: 10px;
         }
         color: $color_fontColor;
         font-size: $standardFontSize;
         padding: 0 15px 0 0;
       }
+
       .tag {
-        @include breakpoint($ipad){
+        @include breakpoint($ipad) {
           margin-bottom: 5px;
         }
+
         &:hover {
           color: $color_fontColor;
         }
+
         cursor: pointer;
         border-radius: 20px;
         font-size: $standardFontSize;

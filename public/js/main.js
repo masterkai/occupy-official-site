@@ -18,3 +18,8 @@ var greetHTML = templates['greeting']({
     message: person.hello()
 });
 // document.write(greetHTML);
+
+const result = data.filter(item=>item.regions.includes('信義區'))
+console.log('result: ',result);
+
+console.log('length: ',data.length);

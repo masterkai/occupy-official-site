@@ -6,8 +6,7 @@
     <meta name="viewport"
           content="width=device-width, initial-scale=1, shrink-to-fit=no, maximum-scale=1.0, user-scalable=0">
     <title>ES6</title>
-    <link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
-    <!--=========================== CSS ===========================-->
+    <link rel="icon" type="image/png" sizes="96x96" href="./favicon-96x96.png">    <!--=========================== CSS ===========================-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
@@ -21,8 +20,6 @@
     <!--=========================== JS ===========================-->
     <script defer defer src="build/js/light.min.js"></script>
     <script defer defer src="build/js/brands.min.js"></script>
-    <!--    <script defer defer src="build/js/regular.min.js"></script>-->
-    <!--    <script defer defer src="build/js/solid.min.js"></script>-->
     <script defer defer src="build/js/fontawesome.min.js"></script>
     <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
@@ -558,189 +555,67 @@
         </section>
         <!--end of course search bar-->
 
+        <!--filter-panel-container-->
+        <div class="filter-panel-section">
+            <div class="container">
+                <div class="row">
+                    <div class="filter-panel-container filter-panel-container__success" id="filterPanelBox__success">
+                        <div class="recommend-container recommend-container__success">
+                            <span>成功案例產業分項</span>
+                            <select name="">
+
+                            </select>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
         <!--header-->
         <div class="container">
             <div class="row">
-                <header>
-                    <div id="bannerCarousel">
-                        <div class="banner">
-                            <img class="img-responsive" src="./build/images/2018121910525076.jpg" alt="">
+                <header class="bannerCarousel--success">
+                    <div class="carouselBox carouselBox--success" id="carouselBox"></div>
+                    <div class="carouselVerticalNav carouselVerticalNav--success">
+                        <div class="conditionBtn conditionBtn_right">
+                            <i class="fal fa-chevron-double-right"></i>
                         </div>
-                        <div class="banner">
-                            <img class="img-responsive" src="./build/images/2018121910531276.jpg" alt="">
-                        </div>
-                        <div class="banner">
-                            <img class="img-responsive" src="./build/images/2018121910532977.jpg" alt="">
-                        </div>
-                        <div class="banner">
-                            <img class="img-responsive" src="./build/images/2018121910535920.jpg" alt="">
-                        </div>
-                        <div class="banner">
-                            <img class="img-responsive" src="./build/images/2018121910534694.jpg" alt="">
+                        <div class="conditionBtn conditionBtn_left">
+                            <i class="fal fa-chevron-double-left"></i>
                         </div>
                     </div>
-                    <div class="clearfix"></div>
                 </header>
             </div>
         </div>
-        <!--end of header-->
 
-        <!--最新影音-->
-        <section class="newest-videos" id="video">
+        <!--start of 成功案例-->
+        <section class="success">
             <div class="container">
                 <div class="row">
                     <div class="section-title">
-                        最新影音
                         <div class="bar"></div>
                     </div>
-                    <div class="videos">
-                        <div class="video">
-                            <a href="https://youtu.be/lu8X6q7NK0Y?autoplay=1" class="venobox" data-type="youtube"
-                               data-gall="gall-video">
-                                <div class="video-img"
-                                     style="background-image: url(./build/images/26.jpg)">
-                                    <i class="fab fa-youtube fa-3x"></i>
-                                </div>
-                            </a>
-                            <div class="video-content">
-                                <div class="video-subject">2017年uber最新戶外廣告</div>
-                            </div>
-
-                        </div>
-                        <div class="video">
-                            <a href="https://youtu.be/P9T4I4Nwlok?autoplay=1" class="venobox" data-type="youtube"
-                               data-gall="gall-video">
-                                <div class="video-img"
-                                     style="background-image: url(./build/images/65.jpg)">
-                                    <i class="fab fa-youtube fa-3x"></i>
-                                </div>
-                            </a>
-                            <div class="video-content">
-                                <div class="video-subject">Try It!純喫茶</div>
-                            </div>
-
-                        </div>
-                        <div class="video">
-                            <a href="https://youtu.be/xW-FWMjJHj0?autoplay=1" class="venobox" data-type="youtube"
-                               data-gall="gall-video">
-                                <div class="video-img"
-                                     style="background-image: url(./build/images/9.jpg)">
-                                    <i class="fab fa-youtube fa-3x"></i>
-                                </div>
-                            </a>
-                            <div class="video-content">
-                                <div class="video-subject">17直播電視牆戶外廣告</div>
-                            </div>
-
-                        </div>
-                        <div class="video">
-                            <a href="https://youtu.be/8z2EAp3E04k?autoplay=1" class="venobox" data-type="youtube"
-                               data-gall="gall-video">
-                                <div class="video-img"
-                                     style="background-image: url(./build/images/87.jpg)">
-                                    <i class="fab fa-youtube fa-3x"></i>
-                                </div>
-                            </a>
-                            <div class="video-content">
-                                <div class="video-subject">2017台灣代駕</div>
-                            </div>
-
-                        </div>
-                        <div class="video">
-                            <a href="https://youtu.be/KOXEljZvve0?autoplay=1" class="venobox" data-type="youtube"
-                               data-gall="gall-video">
-                                <div class="video-img"
-                                     style="background-image: url(./build/images/68.jpg)">
-                                    <i class="fab fa-youtube fa-3x"></i>
-                                </div>
-                            </a>
-                            <div class="video-content">
-                                <div class="video-subject">2017 1月份西門WIFI(陰陽師)</div>
-                            </div>
-
-                        </div>
+                    <div class="successNav">
                     </div>
+                    <nav aria-label="Page navigation" style="text-align: center;">
+                        <ul class="pagination">
+                            <li class="cannotBeRemove">
+                                <a href="" aria-label="Previous">
+                                    <span aria-hidden="true">&laquo;</span>
+                                </a>
+                            </li>
+
+                            <li class="cannotBeRemove">
+                                <a href="" aria-label="Next">
+                                    <span aria-hidden="true">&raquo;</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
                 </div>
             </div>
-
-        </section>
-        <!--end of 最新影音-->
-
-        <!--成功案例-->
-        <section class="sampleSec">
-            <div class="container">
-                <div class="row">
-                    <div class="section-title">
-                        成功案例
-                        <div class="bar"></div>
-                    </div>
-                    <div class="samples">
-                        <div class="sample">
-                            <a href="https://youtu.be/FfpRfX_wERk?autoplay=1" class="venobox" data-type="youtube"
-                               data-gall="gall-video">
-                                <div class="sample-img"
-                                     style="background-image: url(https://via.placeholder.com/300)">
-                                </div>
-                            </a>
-                            <div class="sample-content">
-                                <div class="sample-subject">17直播電視牆戶外廣告</div>
-                            </div>
-
-                        </div>
-                        <div class="sample">
-                            <a href="https://youtu.be/FfpRfX_wERk?autoplay=1" class="venobox" data-type="youtube"
-                               data-gall="gall-video">
-                                <div class="sample-img"
-                                     style="background-image: url(https://via.placeholder.com/300)">
-                                </div>
-                            </a>
-                            <div class="sample-content">
-                                <div class="sample-subject">17直播電視牆戶外廣告</div>
-                            </div>
-
-                        </div>
-                        <div class="sample">
-                            <a href="https://youtu.be/FfpRfX_wERk?autoplay=1" class="venobox" data-type="youtube"
-                               data-gall="gall-video">
-                                <div class="sample-img"
-                                     style="background-image: url(https://via.placeholder.com/300)">
-                                </div>
-                            </a>
-                            <div class="sample-content">
-                                <div class="sample-subject">17直播電視牆戶外廣告</div>
-                            </div>
-
-                        </div>
-                        <div class="sample">
-                            <a href="https://youtu.be/FfpRfX_wERk?autoplay=1" class="venobox" data-type="youtube"
-                               data-gall="gall-video">
-                                <div class="sample-img"
-                                     style="background-image: url(https://via.placeholder.com/300)">
-                                </div>
-                            </a>
-                            <div class="sample-content">
-                                <div class="sample-subject">17直播電視牆戶外廣告</div>
-                            </div>
-
-                        </div>
-                        <div class="sample">
-                            <a href="https://youtu.be/FfpRfX_wERk?autoplay=1" class="venobox" data-type="youtube"
-                               data-gall="gall-video">
-                                <div class="sample-img"
-                                     style="background-image: url(https://via.placeholder.com/300)">
-                                </div>
-                            </a>
-                            <div class="sample-content">
-                                <div class="sample-subject">17直播電視牆戶外廣告</div>
-                            </div>
-
-                        </div>
-
-                    </div>
-
-                </div>
-            </div>
-
         </section>
         <!--end of 成功案例-->
 
@@ -776,13 +651,13 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/3.0.1/jquery-migrate.min.js"></script>
 <script type="application/javascript"
         src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.4.2/handlebars.min.js"
         integrity="sha256-oh7N5nthuhldTk8/34Za7FXv3BkeVN9vAnYk/pLfC78=" crossorigin="anonymous"></script>
 <script type="application/javascript" src="build/js/templates.js"></script>
 <script type="application/javascript" src="build/js/venobox.min.js"></script>
+<script type="application/javascript" src="build/js/jquery.scrollTo.min.js"></script>
 <script type="application/javascript" src="http://localhost:35729/livereload.js"></script>
 <script type="application/javascript" src="build/js/scripts.min.js"></script>
-
+<script type="application/javascript" src="build/js/slick.min.js"></script>
 </body>
 </html>

@@ -1,79 +1,369 @@
 header {
-  &.bannerCarousel--location {
-    max-width: $locationInfoWidth;
-    overflow: hidden;
-    margin: 0 auto;
-    display: flex;
-    flex-flow: row;
-    position: relative;
-
-    .expandBtn {
-      svg {
-        padding: 4px;
-        color: $color_fontColor;
-      }
-
-      padding: 4px;
-      background-color: $color_white;
-      position: absolute;
-      z-index: 10;
-      top: 38px;
-      right: 10px;
-      cursor: pointer;
-    }
-
-    .carouselBox {
+  &.bannerCarousel {
+    &--latestRelease {
+      padding-top: 28px;
+      padding-bottom: 50px;
+      max-width: $locationInfoWidth;
+      overflow: hidden;
+      margin: 0 auto;
       display: flex;
-      flex-direction: column;
-      max-width: calc(100% - 30%);
-      margin: 28px 0 50px;
-      height: $mapHeight;
+      flex-flow: row;
+      position: relative;
 
-      &.disappear {
-        width: 0;
+
+      .carouselBox {
+        &--latestRelease {
+          .slick-dotted.slick-slider {
+            margin-bottom: auto;
+          }
+
+          max-width: calc(100% - 256px);
+        }
+
+        display: flex;
+        flex-direction: column;
+        max-width: calc(100% - 30%);
+        margin: 0;
+        height: $mapHeight;
+
+        &.disappear {
+          width: 0;
+        }
+
+        .latestReleaseCarousel {
+          .slick-track {
+            width: 720px;
+            height: auto;
+          }
+
+          .slick-dots {
+            //bottom: 0;
+          }
+
+          &:first-child {
+            visibility: visible;
+            height: auto;
+          }
+
+          height: 0;
+          visibility: hidden;
+
+          button {
+            &.disappear {
+              visibility: hidden;
+            }
+          }
+
+
+        }
       }
 
-      .locationCarousel {
-        .slick-track {
-          width: 720px;
-          height: auto;
-        }
+      .carouselVerticalNav {
+        position: relative;
+        border: 1px solid white;
+        margin: 0;
+        width: 256px;
+        height: 480px;
 
-        .slick-dots {
-          //bottom: 0;
-        }
+        .briefIntro {
+          display: flex;
+          flex-flow: column;
+          justify-content: space-between;
+          padding: 0 15px;
+          height: 170px;
+          //border: 1px solid #002475;
+          &_title {
+            color: $color_occupy;
+            line-height: 1.2;
+            font-size: 1.25rem;
+            //padding-bottom: 10px;
+            //margin-bottom: 5px;
+            //border-bottom: 1px solid lighten($color_fontColor, 20%);
+          }
 
-        &:first-child {
-          visibility: visible;
-          height: auto;
-        }
-
-        height: 0;
-        visibility: hidden;
-
-        button {
-          &.disappear {
-            visibility: hidden;
+          &_desc {
+            font-size: $standardFontSize;
+            line-height: 1.5;
+            color: $color_fontColor;
+            font-weight: 100;
           }
         }
 
+        .miniPic {
+          //border: 1px solid #002475;
+          margin: 6px auto 0;
+          padding: 0;
+          height: calc(100% - 170px);
+          width: 225px;
+          display: flex;
+          flex-flow: column;
+          flex-wrap: wrap;
+          justify-content: flex-start;
+          align-items: stretch;
+          overflow: hidden;
 
+          img {
+            cursor: pointer;
+            padding: 0 5px 5px 0;
+            width: 114px;
+            height: 74px;
+            flex: 0 1 25%;
+          }
+        }
+
+        .conditionBtn {
+          &_right {
+            display: none;
+          }
+
+          &_left {
+            display: none;
+          }
+
+
+          opacity: 1;
+          cursor: pointer;
+          position: absolute;
+          bottom: 15px;
+          right: 25px;
+          background-color: white;
+          padding: 5px;
+
+          .svg-inline--fa {
+            color: $color_occupy;
+          }
+        }
       }
+
+
+    }
+    &--success {
+      padding-top: 28px;
+      padding-bottom: 50px;
+      max-width: $locationInfoWidth;
+      overflow: hidden;
+      margin: 0 auto;
+      display: flex;
+      flex-flow: row;
+      position: relative;
+
+
+      .carouselBox {
+        &--success {
+          .slick-dotted.slick-slider {
+            margin-bottom: auto;
+          }
+
+          max-width: calc(100% - 256px);
+        }
+
+        display: flex;
+        flex-direction: column;
+        max-width: calc(100% - 30%);
+        margin: 0;
+        height: $mapHeight;
+
+        &.disappear {
+          width: 0;
+        }
+
+        .locationCarousel {
+          .slick-track {
+            width: 720px;
+            height: auto;
+          }
+
+          .slick-dots {
+            //bottom: 0;
+          }
+
+          &:first-child {
+            visibility: visible;
+            height: auto;
+          }
+
+          height: 0;
+          visibility: hidden;
+
+          button {
+            &.disappear {
+              visibility: hidden;
+            }
+          }
+
+
+        }
+      }
+
+      .carouselVerticalNav {
+        position: relative;
+        border: 1px solid white;
+        margin: 0;
+        width: 256px;
+        height: 480px;
+
+        .briefIntro {
+          display: flex;
+          flex-flow: column;
+          justify-content: space-between;
+          padding: 0 15px;
+          height: 170px;
+          //border: 1px solid #002475;
+          &_title {
+            color: $color_occupy;
+            line-height: 1.2;
+            font-size: 1.25rem;
+            //padding-bottom: 10px;
+            //margin-bottom: 5px;
+            //border-bottom: 1px solid lighten($color_fontColor, 20%);
+          }
+
+          &_desc {
+            font-size: $standardFontSize;
+            line-height: 1.5;
+            color: $color_fontColor;
+            font-weight: 100;
+          }
+        }
+
+        .miniPic {
+          //border: 1px solid #002475;
+          margin: 6px auto 0;
+          padding: 0;
+          height: calc(100% - 170px);
+          width: 225px;
+          display: flex;
+          flex-flow: column;
+          flex-wrap: wrap;
+          justify-content: flex-start;
+          align-items: stretch;
+          overflow: hidden;
+
+          img {
+            cursor: pointer;
+            padding: 0 5px 5px 0;
+            width: 114px;
+            height: 74px;
+            flex: 0 1 25%;
+          }
+        }
+
+        .conditionBtn {
+          &_right {
+            display: none;
+          }
+
+          &_left {
+            display: none;
+          }
+
+
+          opacity: 1;
+          cursor: pointer;
+          position: absolute;
+          bottom: 15px;
+          right: 25px;
+          background-color: white;
+          padding: 5px;
+
+          .svg-inline--fa {
+            color: $color_occupy;
+          }
+        }
+      }
+
+
     }
 
+    &--location {
+      @include breakpoint($iphone) {
+        height: 300px;
+      }
+      max-width: $locationInfoWidth;
+      overflow: hidden;
+      margin: 0 auto;
+      display: flex;
+      flex-flow: row;
+      position: relative;
 
-    .map-container {
-      &.fullWidth {
-        width: 100%;
+      .expandBtn {
+        @include breakpoint($iphone){
+          display: none;
+        }
+        svg {
+          padding: 4px;
+          color: $color_fontColor;
+        }
+
+        padding: 4px;
+        background-color: $color_white;
+        position: absolute;
+        z-index: 10;
+        top: 38px;
+        right: 10px;
+        cursor: pointer;
       }
 
-      .map {
+      .carouselBox {
+        .slick-dotted.slick-slider {
+          margin-bottom: auto;
+        }
+
+        @include breakpoint($iphone) {
+          max-width: 100%;
+        }
+        display: flex;
+        flex-direction: column;
+        max-width: calc(100% - 25%);
+        margin: 28px 0 50px;
+        height: $mapHeight;
+
+        &.disappear {
+          width: 0;
+        }
+
+        .locationCarousel {
+          .slick-track {
+            width: 720px;
+            height: auto;
+          }
+
+          &:first-child {
+            visibility: visible;
+            height: auto;
+          }
+
+          height: 0;
+          visibility: hidden;
+
+          button {
+            &.disappear {
+              visibility: hidden;
+            }
+          }
+
+
+        }
+      }
+
+
+      .map-container {
+        @include breakpoint($iphone) {
+          display: none;
+        }
+
+        &.fullWidth {
+          width: 100%;
+        }
+
+        .map {
+          height: $mapHeight;
+        }
+
+        margin-top: 28px;
+        width: calc(25%);
         height: $mapHeight;
       }
-
-      margin-top: 28px;
-      width: calc(30%);
-      height: $mapHeight;
     }
   }
 
