@@ -110,7 +110,7 @@ $(function () {
 
       return `<div class="locationCarousel">${LocationCarouselItemHTML}</div>`
     }).join('')
-    $('#carouselBox').append(sliderSets)
+    $('#carouselBox--location').append(sliderSets)
 
     if ($('.locationCarousel').length > 0) {
       $('.locationCarousel').slick({
@@ -195,7 +195,7 @@ $(function () {
         })
       })
     }
-    $('.recommend-container select').on('change', function () {
+    $('.recommend-container__location select').on('change', function () {
       // locationCarousel set to 0
       $('.locationCarousel').slick('slickGoTo', 0);
       controller.renderAllTag(this.value)

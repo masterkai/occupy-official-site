@@ -1,0 +1,125 @@
+
+
+.modalMask {
+  .posting {
+    display: none;
+    position: absolute;
+    z-index: 100;
+    top: 15%;
+    left: 50%;
+    transform: translateX(-50%);
+
+    .container--service {
+      width: 1030px;
+      padding: 20px;
+      background: $color_white;
+      display: flex;
+      .slider {
+        &:first-child {
+          visibility: visible;
+          flex-basis: auto;
+          width: 740px;
+          height: 480px;
+        }
+        flex-basis: 0;
+        width: 0;
+        height: 0;
+        visibility: hidden;
+
+        &.slick-dotted.slick-slider {
+          margin-bottom: 0;
+        }
+      }
+      .carouselVerticalNav--service {
+        order: 1;
+        flex: 1 1 25%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        position: relative;
+        border: 1px solid white;
+        margin: 0;
+        height: 480px;
+        overflow: hidden;
+
+        .briefIntro--service {
+          display: flex;
+          flex-flow: column;
+          justify-content: flex-start;
+          padding: 0 0  0 10px;
+          height: 170px;
+          .briefIntro_title {
+            color: $color_occupy;
+            line-height: 1.2;
+            font-size: 1.25rem;
+            margin-bottom: 15px;
+          }
+          .briefIntro_desc {
+            margin-top: 15px;
+            font-size: $standardFontSize;
+            line-height: 1.5;
+            color: $color_fontColor;
+            font-weight: 100;
+          }
+        }
+
+        .miniPic--service {
+          margin: 0 auto;
+          padding: 0;
+          height: calc(100% - 170px);
+          width: 225px;
+          display: flex;
+          flex-flow: column;
+          flex-wrap: wrap;
+          justify-content: flex-start;
+          align-items: stretch;
+          overflow: hidden;
+
+          img {
+            cursor: pointer;
+            padding: 5px 5px 0 0;
+            width: 114px;
+            height: 74px;
+            flex: 0 1 25%;
+          }
+        }
+
+        .conditionBtn {
+          &_right {
+            display: none;
+          }
+
+          &_left {
+            display: none;
+          }
+
+
+          opacity: 1;
+          cursor: pointer;
+          position: absolute;
+          bottom: 15px;
+          right: 25px;
+          background-color: white;
+          padding: 5px;
+
+          .svg-inline--fa {
+            color: $color_occupy;
+          }
+        }
+      }
+    }
+  }
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.5); /* Black w/ opacity */
+}
+

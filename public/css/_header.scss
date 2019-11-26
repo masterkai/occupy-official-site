@@ -193,6 +193,33 @@ header {
 
 
         }
+
+        .successCarousel {
+          .slick-track {
+            width: 720px;
+            height: auto;
+          }
+
+          .slick-dots {
+            //bottom: 0;
+          }
+
+          &:first-child {
+            visibility: visible;
+            height: auto;
+          }
+
+          height: 0;
+          visibility: hidden;
+
+          button {
+            &.disappear {
+              visibility: hidden;
+            }
+          }
+
+
+        }
       }
 
       .carouselVerticalNav {

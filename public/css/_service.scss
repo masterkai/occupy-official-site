@@ -1,0 +1,65 @@
+.service {
+  @include breakpoint($ipad) {
+    margin-top: 15px;
+  }
+
+  .serviceNav {
+    max-width: 1170px;
+    overflow: hidden;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    @include breakpoint($ipad){
+
+    }
+
+    .serviceItem {
+      cursor: pointer;
+      padding: 20px 10px 0;
+      flex: 0 1 25%;
+
+      @include breakpoint($ipad) {
+        margin: 0;
+        padding: 0;
+        flex: 0 1 50%;
+      }
+
+      .serviceItem-img {
+        background-position: center center;
+        background-size: cover;
+        height: 200px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        svg {
+          color: rgba($color_white, .7)
+        }
+
+        &:hover {
+          svg {
+            color: rgba($color_white, 1)
+          }
+        }
+      }
+
+      .serviceItem-content {
+        text-align: center;
+        line-height: 1.5;
+        font-size: $defaultFontSize;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+        color: $color_fontColor;
+        font-weight: 100;
+        .serviceItem-subject {
+          color: $color_occupy;
+          line-height: 1.6;
+        }
+      }
+    }
+  }
+}

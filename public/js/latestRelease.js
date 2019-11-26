@@ -16,6 +16,10 @@ $(function () {
               $('.latestReleaseCarousel').eq(index).slick('slickPlay');
               $('.latestReleaseCarousel').eq(this.lastItem).slick('slickPause');
               this.lastItem = index
+
+              $("html,body").animate({
+                scrollTop: 0
+              }, 400);
             })
           })
         }
@@ -173,28 +177,6 @@ $(function () {
       $('#carouselBox_latestRelease').append(sliderSets)
 
     }
-
-    // $('.latestReleaseCarousel').slick({
-    //   lazyLoad: 'ondemand',
-    //   laztLoad: 'progressive',
-    //   infinite: false,
-    //   arrows: true,
-    //   autoplay: false,
-    //   dots: true,
-    //   responsive: [
-    //     {
-    //       breakpoint: 760,
-    //       settings: {
-    //         slidesToShow: 1,
-    //         slideToScroll: 1,
-    //         infinite: false,
-    //         dots: false,
-    //         arrows: true,
-    //       }
-    //     }
-    //   ]
-    // });
-
 
     $(document).ready(function () {
       renderLatestReleaseFilter(0, controller.month)

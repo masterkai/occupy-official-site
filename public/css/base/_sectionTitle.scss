@@ -1,4 +1,9 @@
 .section-title {
+  span {
+    margin-left: 25px;
+    font-size: 20px;
+    color: $color_occupy;
+  }
   max-width: 1160px;
   margin: 0 auto;
   font-size: 1.4rem;
@@ -6,7 +11,7 @@
     text-align: center;
   }
   .bar {
-    border-bottom: 1px solid $color_deep-gray;
+    border-bottom: 1px solid lighten($color_fontColor, 20%);
     margin-top: 8px;
   }
 }
