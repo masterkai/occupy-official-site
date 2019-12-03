@@ -2,7 +2,9 @@
   @include breakpoint($ipad) {
     margin-top: 15px;
   }
-
+  .slick-next, .slick-prev {
+    top:25%
+  }
   .videos {
     max-width: 1170px;
     overflow: hidden;

@@ -1,6 +1,8 @@
 .sampleSec {
   margin: 10px auto 0;
-
+  .slick-next, .slick-prev {
+    top:25%
+  }
   .samples {
     max-width: 1170px;
     overflow: hidden;

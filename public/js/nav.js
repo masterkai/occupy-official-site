@@ -1,4 +1,5 @@
 $(function () {
+  $('.menuContainer > li').css('display', 'flex');
   const isFirefox = typeof InstallTrigger !== 'undefined';
   const isIE = /*@cc_on!@*/false || !!document.documentMode;
   const isEdge = !isIE && !!window.StyleMedia;
@@ -17,6 +18,7 @@ $(function () {
       $(target).children('.mddWrap').css('left', `-${navbarBrandWidth + (menuContainerDynamicLiWidth * index)}px`)
     })
   }
+
   function detectShrink() {
     if (navFlexContainer.hasClass('shrink')) {
       navbarBrandWidth = 130
@@ -35,7 +37,7 @@ $(function () {
     $(window).scroll(function () {
       if ($window.scrollTop() > 100) {
         detectShrink()
-      }else {
+      } else {
         detectShrink()
       }
     })

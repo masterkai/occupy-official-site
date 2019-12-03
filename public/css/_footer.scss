@@ -20,11 +20,13 @@ footer {
 }
 
 .footerBlue {
+  @include breakpoint($ipad){
+    border-radius: unset;
+  }
   height: 25px;
   width: 100%;
   max-width: 1160px;
   margin: 10px auto 0;
-
   border-radius: 0 0 16px 16px;
   background-color: $color_occupy;
 }

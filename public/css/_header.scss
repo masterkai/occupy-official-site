@@ -9,22 +9,30 @@ header {
       display: flex;
       flex-flow: row;
       position: relative;
-
+      @include breakpoint($ipad){
+        flex-direction: column;
+        padding-bottom: 10px;
+      }
 
       .carouselBox {
         &--latestRelease {
           .slick-dotted.slick-slider {
             margin-bottom: auto;
           }
-
+          @include breakpoint($ipad){
+            max-width: calc(100%);
+          }
           max-width: calc(100% - 256px);
         }
-
+        @include breakpoint($ipad) {
+          height: auto;
+        }
         display: flex;
         flex-direction: column;
         max-width: calc(100% - 30%);
         margin: 0;
         height: $mapHeight;
+
 
         &.disappear {
           width: 0;
@@ -59,6 +67,10 @@ header {
       }
 
       .carouselVerticalNav {
+        @include breakpoint($iphone){
+          height: auto;
+          width: 100%;
+        }
         position: relative;
         border: 1px solid white;
         margin: 0;
@@ -68,8 +80,8 @@ header {
         .briefIntro {
           display: flex;
           flex-flow: column;
-          justify-content: space-between;
-          padding: 0 15px;
+          justify-content: space-evenly;
+          padding: 10px 10px 0 15px;
           height: 170px;
           //border: 1px solid #002475;
           &_title {
@@ -82,7 +94,8 @@ header {
           }
 
           &_desc {
-            font-size: $standardFontSize;
+            font-size: $miniDesc;
+            text-align: justify;
             line-height: 1.5;
             color: $color_fontColor;
             font-weight: 100;
@@ -91,6 +104,9 @@ header {
 
         .miniPic {
           //border: 1px solid #002475;
+          @include breakpoint($ipad) {
+            display: none;
+          }
           margin: 6px auto 0;
           padding: 0;
           height: calc(100% - 170px);
@@ -138,6 +154,10 @@ header {
 
     }
     &--success {
+      @include breakpoint($ipad) {
+        flex-flow: column;
+        padding-bottom: 10px;
+      }
       padding-top: 28px;
       padding-bottom: 50px;
       max-width: $locationInfoWidth;
@@ -153,7 +173,10 @@ header {
           .slick-dotted.slick-slider {
             margin-bottom: auto;
           }
-
+          @include breakpoint($ipad){
+            max-width: calc(100%);
+            height: auto;
+          }
           max-width: calc(100% - 256px);
         }
 
@@ -223,6 +246,10 @@ header {
       }
 
       .carouselVerticalNav {
+        @include breakpoint($ipad) {
+          height: auto;
+          width: 100%;
+        }
         position: relative;
         border: 1px solid white;
         margin: 0;
@@ -232,8 +259,8 @@ header {
         .briefIntro {
           display: flex;
           flex-flow: column;
-          justify-content: space-between;
-          padding: 0 15px;
+          justify-content: space-evenly;
+          padding: 10px 15px 0 15px;
           height: 170px;
           //border: 1px solid #002475;
           &_title {
@@ -246,7 +273,7 @@ header {
           }
 
           &_desc {
-            font-size: $standardFontSize;
+            font-size: $miniDesc;
             line-height: 1.5;
             color: $color_fontColor;
             font-weight: 100;
@@ -254,7 +281,9 @@ header {
         }
 
         .miniPic {
-          //border: 1px solid #002475;
+          @include breakpoint($ipad){
+            display: none;
+          }
           margin: 6px auto 0;
           padding: 0;
           height: calc(100% - 170px);
@@ -276,6 +305,7 @@ header {
         }
 
         .conditionBtn {
+
           &_right {
             display: none;
           }
@@ -283,7 +313,6 @@ header {
           &_left {
             display: none;
           }
-
 
           opacity: 1;
           cursor: pointer;

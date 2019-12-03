@@ -33,9 +33,9 @@ $(function () {
         }
         const filteredMonthArr = data.filter(item => item.month === month)
         const miniPicSet = filteredMonthArr.map(function (item) {
-          const imgItems = item.pictures.map(img => `<img src="./build/images/${img}.JPG" alt="">`).join('')
+          const imgItems = item.pictures.map(img => `<img src="./build/images/${img}.jpg" alt="">`).join('')
           return `<div class="briefIntro">
-                            <div class="briefIntro_title">${item.briefTitle}</div>
+                            <div class="briefIntro_title">${item.briefTitle}<br><span style="margin-top: 15px;font-size: 15px;">${item.subTitle}</span></div>
                             <div class="separateLineHorizontal"></div>
                             <div class="briefIntro_desc">${item.brief}</div>
                         </div>
@@ -110,7 +110,7 @@ $(function () {
                   
               </div>
               <div class="latestReleaseItem-content">
-                  <div class="latestReleaseItem-subject">${x.locNum}</div>
+                  <div class="latestReleaseItem-subject">${x.briefTitle.substring(0, 11)} / ${x.locNum}</div>
               </div>
   
           </div>`).join('')

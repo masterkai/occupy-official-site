@@ -1,5 +1,8 @@
 .section-title {
   span {
+    @include breakpoint($ipad){
+      margin-left: 0;
+    }
     margin-left: 25px;
     font-size: 20px;
     color: $color_occupy;
@@ -15,3 +18,4 @@
     margin-top: 8px;
   }
 }
+

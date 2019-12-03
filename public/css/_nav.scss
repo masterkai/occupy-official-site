@@ -151,7 +151,7 @@
         transition: all .3s ease-in-out;
         height: 73px;
         cursor: pointer;
-        display: flex;
+        display: none;
         justify-content: center;
         align-items: center;
 
@@ -392,7 +392,7 @@
                 justify-content: space-evenly;
 
                 .dFlexContainer {
-                  //flex-grow: 1;
+
                 }
               }
             }
@@ -527,7 +527,6 @@
             text-decoration: none;
           }
         }
-
         font-size: 0.8em;
         line-height: 1.8em;
       }

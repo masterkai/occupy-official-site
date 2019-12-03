@@ -2,7 +2,7 @@ $(function () {
   (function ($) {
     // pagination start
     const state = {
-      last : 0
+      last: 0
     }
     const pagination = document.querySelector('.pages');
     const output = document.querySelector('.successNav');
@@ -54,13 +54,13 @@ $(function () {
         div.dataset.index = x
         let img = document.createElement('div')
         img.classList.add('successItem-img')
-        img.style.backgroundImage = `url(./build/images/${item.pictures[0]}.JPG)`
+        img.style.backgroundImage = `url(./build/images/${item.pictures[0]}.jpg)`
         div.appendChild(img)
         let itemContent = document.createElement('div')
         itemContent.classList.add('successItem-content')
         let itemSubject = document.createElement('div')
         itemSubject.classList.add('successItem-subject')
-        itemSubject.textContent = item.locNum
+        itemSubject.textContent = item.briefTitle.substring(0, 14) + ' / ' + item.locNum
         itemContent.appendChild(itemSubject)
         div.appendChild(itemContent)
 
@@ -103,7 +103,7 @@ $(function () {
       }
     })
 
-    function renderSuccessCarousel(data=data) {
+    function renderSuccessCarousel(data = data) {
       $('.carouselBox--success').children().remove()
       const sliderSets = data.map(function (slider) {
         let LocationCarouselItemHTML = slider.pictures.map(item => `<div class="banner">
@@ -116,7 +116,6 @@ $(function () {
       if ($('.successCarousel').length > 0) {
         $('.successCarousel').slick({
           lazyLoad: 'ondemand',
-          laztLoad: 'progressive',
           infinite: false,
           arrows: true,
           autoplay: false,
@@ -147,7 +146,7 @@ $(function () {
       $('.recommend-container__success select').append(options)
     }
 
-    function renderSuccessFilter(index = 0, data=data) {
+    function renderSuccessFilter(index = 0, data = data) {
       $('#filterPanelBox__success').find('div:not(".recommend-container__success")').remove()
 
       const successFilterSet = data.map((item) => {
@@ -173,7 +172,7 @@ $(function () {
     }
     renderSuccessCarousel(data)
     renderSortingFunc()
-    renderSuccessFilter(0,data)
+    renderSuccessFilter(0, data)
     generateMiniPicSets(0, data)
 
     function generateMiniPicSets(index = 0, data = data) {
@@ -185,9 +184,9 @@ $(function () {
       }
 
       const miniPicSet = data.map(function (item) {
-        const imgItems = item.pictures.map(img => `<img src="./build/images/${img}.JPG" alt="">`).join('')
+        const imgItems = item.pictures.map(img => `<img src="./build/images/${img}.jpg" alt="">`).join('')
         return `<div class="briefIntro">
-                    <div class="briefIntro_title">${item.briefTitle}</div>
+                    <div class="briefIntro_title">${item.briefTitle}<br><span style="margin-top: 15px;font-size: 15px;">${item.subTitle}</span></div>
                     <div class="separateLineHorizontal"></div>
                     <div class="briefIntro_desc">${item.brief}</div>
                 </div>
@@ -197,7 +196,7 @@ $(function () {
       $('.carouselVerticalNav--success').append(miniPicSet[index])
       // initialize conditionBtn
       // console.log('miniPic img length', $('.miniPic img').length);
-      if ($('.miniPic img').length > 8) {
+      if ($(window).width() > 768 && $('.miniPic img').length > 8) {
         $('.conditionBtn_right').css('display', 'block')
         $('.conditionBtn_right').click(function () {
           $('.miniPic').scrollTo($('.miniPic img:last-child'), 0)
@@ -208,7 +207,7 @@ $(function () {
       }
       $('.conditionBtn_left').click(function () {
         $('.miniPic').scrollTo($('.miniPic img:first-child'), 0)
-      })
+      });
       if ($('.miniPic img').length > 16) {
         $('.conditionBtn_right').click(function () {
           $('.miniPic').scrollTo('225px', 0)
@@ -256,13 +255,12 @@ $(function () {
     }
 
 
-
     function clickEvent(index, sortedData) {
 
       renderSuccessFilter(index, sortedData)
       $('.successCarousel').slick('slickGoTo', 0);
       // $(".recommend-container select").val(`${index}`);
-      generateMiniPicSets(index,sortedData)
+      generateMiniPicSets(index, sortedData)
       $('.successCarousel').eq(state.last).css({visibility: 'hidden', height: 0, marginBottom: 0})
       $('.successCarousel').eq(index).css({visibility: 'visible', height: 'auto'})
       $('.successCarousel').eq(index).slick('slickPlay');

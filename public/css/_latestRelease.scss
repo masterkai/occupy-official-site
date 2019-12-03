@@ -9,7 +9,9 @@
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
-
+    @include breakpoint($ipad){
+      padding: 0 6px;
+    }
 
     .latestReleaseItem {
       cursor: pointer;
@@ -18,10 +20,21 @@
 
       @include breakpoint($ipad) {
         margin: 0;
-        padding: 0;
+        padding: 20px 6px;
+        flex-basis: 33.33%;
+        height: auto;
+      }
+      @include breakpoint($iphone) {
+        margin: 0;
+        padding: 20px 6px;
+        flex-basis: 50%;
+        height: auto;
       }
 
       .latestReleaseItem-img {
+        @include breakpoint($ipad){
+          height: 120px;
+        }
         background-position: center center;
         background-size: cover;
         height: 200px;
@@ -47,6 +60,9 @@
 
         .latestReleaseItem-subject {
           color: $color_occupy;
+          @include breakpoint($ipad) {
+            font-size: .8rem;
+          }
         }
       }
     }

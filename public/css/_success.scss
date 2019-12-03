@@ -9,7 +9,7 @@
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
-
+    justify-content: flex-start;
 
     .successItem {
       cursor: pointer;
@@ -17,6 +17,7 @@
       flex: 0 1 25%;
 
       @include breakpoint($ipad) {
+        flex: 0 1 33.33%;
         margin: 0;
         padding: 0;
       }

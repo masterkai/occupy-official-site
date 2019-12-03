@@ -63,10 +63,11 @@ $hideDistance: -1200;
     display: block;
     color: $color_white;
     font-size: 40px;
-    content: '\f104';
+    content: url(../images/prev.svg);
+    //content: '\f104';
     font-family: fontawesome;
     padding: 10px;
-    background-color: black;
+    background-color: unset;
   }
 }
 
@@ -91,10 +92,11 @@ $hideDistance: -1200;
     display: block;
     color: $color_white;
     font-size: 40px;
-    content: '\f105';
+    //content: '\f105';
+    content: url(../images/next.svg);
     font-family: fontawesome;
     padding: 10px;
-    background-color: black;
+    background-color: unset;
   }
 }
 

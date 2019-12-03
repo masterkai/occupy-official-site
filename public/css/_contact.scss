@@ -1,0 +1,219 @@
+.contact {
+  max-width: 1160px;
+  margin: 0 auto;
+  overflow: auto;
+
+  .logo {
+    max-width: 268.527px;
+    margin: 30px auto 0;
+  }
+
+  ul.staffFilter {
+    @include breakpoint($ipad) {
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      margin: 0 auto 30px;
+    }
+    max-width: 960px;
+    padding: 20px;
+    margin: 0 auto 60px;
+    display: flex;
+    justify-content: space-between;
+
+    li {
+      @include breakpoint($iphone) {
+        flex-basis: 25%;
+        font-size: calc(1rem * .8);
+      }
+      @include breakpoint($ipad) {
+        flex-basis: 15%;
+      }
+
+      &.current {
+        color: $color_fontColor;
+      }
+
+      flex-grow: 1;
+      text-align: center;
+      cursor: pointer;
+      font-weight: 100;
+      color: darken(#47AFE2, 10%);
+      margin: 5px 0;
+      font-size: 1.2rem;
+    }
+  }
+
+  .staffBox {
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    background-color: lighten($color_fontColor, 40%);
+
+    .item {
+      @include breakpoint($ipad) {
+        flex: 0 1 33.33%;
+        width: 33.33%;
+      }
+      @include breakpoint($iphone) {
+        flex: 0 1 50%;
+        width: 50%;
+      }
+
+      &:hover {
+        .mask {
+          opacity: .6;
+        }
+
+        .details .name {
+          transform: scale(1) translateZ(0);
+          opacity: 1;
+          transition: transform 0.3s cubic-bezier(0, 0.38, 0.3, 1), opacity 0.3s, -webkit-transform 0.3s cubic-bezier(0, 0.38, 0.3, 1);
+        }
+
+        .details .description {
+          transform: scale(1) translateZ(0);
+          opacity: 1;
+          transition: all 0.6s 0.17s;
+        }
+
+        .details .description::before {
+          width: 70%;
+        }
+      }
+
+      flex: 0 1 25%;
+      height: auto;
+      width: 25%;
+      user-select: none;
+      position: relative;
+      overflow: hidden;
+      background-color: #f2f2f2;
+      line-height: normal;
+      color: white;
+      vertical-align: top;
+      transform: translateZ(0);
+
+      .image {
+        &:after {
+          display: block;
+          padding-top: 100%;
+          content: "";
+        }
+
+        max-width: 100%;
+        background-size: cover;
+        background-position: center;
+        box-sizing: inherit;
+      }
+
+      .mask {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        transition: all 0.25s;
+        opacity: 0;
+        transform: translateZ(0);
+        background: linear-gradient(to bottom, #272d37 0px, #0f426a 100%);
+      }
+
+      .details {
+        padding-right: 10%;
+        padding-left: 10%;
+        position: absolute;
+        top: 50%;
+        right: 0;
+        left: 0;
+        text-align: center;
+        transform: translateY(-50%);
+
+        .name {
+          @include breakpoint($iphone) {
+            font-size: $defaultFontSize;
+          }
+          @include breakpoint($ipad) {
+            font-size: 1.1rem;
+          }
+          opacity: 0;
+          line-height: 1;
+          font-size: $defaultFontSize;
+          transform: scale(1.6) translateZ(0);
+
+          span {
+            font-size: 1.625rem;
+          }
+        }
+
+        .description {
+          &:before {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            width: 0;
+            height: 2px;
+            background-color: #3adafc;
+            content: "";
+            transform: translateX(-50%);
+            transition: all 0.6s 0.1s;
+          }
+
+          @include breakpoint($iphone) {
+            font-size: 10px;
+          }
+          display: inline-block;
+          margin-top: 15px;
+          padding-top: 20px;
+          font-size: 14px;
+          font-family: "Montserrat SemiBold", Helvetica, sans-serif;
+          color: #fff;
+          text-transform: uppercase;
+          position: relative;
+          opacity: 0;
+          transform: scale(1.05) translateZ(0);
+        }
+
+        a {
+          opacity: 0;
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+  }
+}
+
+
+// isotope setting
+.isotope-item {
+  z-index: 2;
+}
+
+.isotope-hidden.isotope-item {
+  pointer-events: none;
+  z-index: 1;
+}
+
+.isotope,
+.isotope .isotope-item {
+  /* change duration value to whatever you like */
+  -webkit-transition-duration: 0.8s;
+  -moz-transition-duration: 0.8s;
+  transition-duration: 0.8s;
+}
+
+.isotope {
+  -webkit-transition-property: height, width;
+  -moz-transition-property: height, width;
+  transition-property: height, width;
+}
+
+.isotope .isotope-item {
+  -webkit-transition-property: -webkit-transform, opacity;
+  -moz-transition-property: -moz-transform, opacity;
+  transition-property: transform, opacity;
+}

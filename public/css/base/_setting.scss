@@ -31,10 +31,16 @@ $color_white: #ffffff;
 $Ypos: -50%;
 
 /* breakpoints setting */
+$brightness: 70%;
 $nav_mobile: max-width 1150px;
 $ipad: max-width 768px;
 $iphone: max-width 550px;
-
+$medium: max-width 991px;
+$large: max-width 1024px;
+$ls-content: 0.04em;
+$color-brown: #453535;
+$color-mainLightBlue: #45DDF1;
+$miniDesc: 14px;
 /* animation for moving mainContents */
 .ani {
   transition: all 0.5s !important;
