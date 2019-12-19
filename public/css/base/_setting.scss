@@ -1,5 +1,5 @@
 $color_deep-gray: #707070;
-$color_fontColor: #888888;
+$color_fontColor: #575757;
 $color_courseName: #1b1b1b;
 $color_tab-hover: #0075a9;
 $color_slickDotsActive: #0096D6;
@@ -31,6 +31,7 @@ $color_white: #ffffff;
 $Ypos: -50%;
 
 /* breakpoints setting */
+$lineHeight: 1.6;
 $brightness: 70%;
 $nav_mobile: max-width 1150px;
 $ipad: max-width 768px;
@@ -72,8 +73,8 @@ span.orange {
   }
 }
 
-html {
-  font-family: "微軟正黑體", Arial;
+html, body {
+  font-family: 'Microsoft YaHei', 'Noto Sans TC', sans-serif;
 }
 
 $btnSize: 75px;

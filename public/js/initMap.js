@@ -5,7 +5,15 @@ let infoWindow = [];
 let lastItem = 0;
 let contentString = '';
 let controller = {
-  filteredArray: data.filter(item=>item.area==='台北-信義區'),
+  filteredArray: data.filter(item => item.area === '台北-信義區').sort(function (a, b) {
+    if (a.locNum < b.locNum) {
+      return -1;
+    }
+    if (a.locNum > b.locNum) {
+      return 1;
+    }
+    return 0;
+  }),
   renderAllTag: function (index = 0) {
     $('#filterPanelBox')
       .find('.filter-tag')
@@ -28,13 +36,12 @@ let controller = {
     $('.locationInfo')
       .children()
       .remove();
-
+    const download = data[i].mediaCard.map(item=>`<a data-toggle="tooltip" title="點撃我!下載媒體卡" role="button" href="./build/images/mediaDownload/${item}.jpg" download="${item}.jpg"><i class="fal fa-arrow-to-bottom fa-2x "></i></a>`).join('');
     const LocationInfoHTML = `<div class="mainInfo">
                         <div class="locationTitle">
                             <span>${data[i].locNum}</span>
                             <div class="separateLine"></div>
-                            <i class="fal fa-comment-alt-dots fa-2x"></i>
-                            <i class="fal fa-sign-in fa-2x"></i>
+                            ${download}
                         </div>
                         <div class="mainInfo_desc">
                             <p><span>點位優勢：</span>${data[i].advantage}</p>
@@ -48,6 +55,7 @@ let controller = {
                         <div class="list"><span>人車分析</span>：${data[i].analysis}</div>
                     </div>`;
     $('.locationInfo').append(LocationInfoHTML);
+    $('[data-toggle="tooltip"]').tooltip();
   },
   setLocationCenter: function (index = 0) {
     return {lat: data[index].latitude, lng: data[index].longitude};
@@ -61,23 +69,23 @@ function initMap() {
     center: locationCenter
   });
 
-  for (let i = 0; i < 5; i++) {
+  for (let i = 0; i < controller.filteredArray.length; i++) {
     let str = {};
     let place = {};
-    contentString = `<div class="infoImg" style="background-image:url(./build/images/${data[i].pictures[0]}.jpg);width: 160px;height: 110px;"></div>
-<p>${data[i].area}</p>
-<span><i class="fal fa-map-pin"></i>  ${data[i].spot}</span>`;
-    place.lat = data[i].latitude;
-    place.lng = data[i].longitude;
+    contentString = `<div class="infoImg" style="background-image:url(./build/images/${controller.filteredArray[i].pictures[0]}.jpg);width: 160px;height: 110px;"></div>
+<p>${controller.filteredArray[i].area}</p>
+<span><i class="fal fa-map-pin"></i>  ${controller.filteredArray[i].spot}</span>`;
+    place.lat = controller.filteredArray[i].latitude;
+    place.lng = controller.filteredArray[i].longitude;
 
     str.map = map;
-    str.title = data[i].locNum;
+    str.title = controller.filteredArray[i].locNum;
     str.position = place;
     // console.log(str);
     let str2 = {};
     let place2 = {};
-    place2.lat = data[i].latitude;
-    place2.lng = data[i].longitude;
+    place2.lat = controller.filteredArray[i].latitude;
+    place2.lng = controller.filteredArray[i].longitude;
     str2.content = contentString;
     str2.position = place2;
     str2.maxWidth = 200;
@@ -94,7 +102,7 @@ function initMap() {
       // $('#selDiv option').eq(i).attr("selected", "selected");
       $('.recommend-container__location select').val(`${i}`);
       controller.renderAllTag(i);
-      controller.renderMainLocationInfoView(data, i);
+      controller.renderMainLocationInfoView(controller.filteredArray, i);
       $('.locationCarousel')
         .eq(lastItem)
         .css({visibility: 'hidden', height: 0, marginBottom: 0});
@@ -154,10 +162,9 @@ $(function () {
     if ($('.locationCarousel').length > 0) {
       $('.locationCarousel').slick({
         lazyLoad: 'ondemand',
-        laztLoad: 'progressive',
         infinite: false,
         arrows: true,
-        autoplay: false,
+        autoplay: true,
         dots: true,
         responsive: [
           {
@@ -166,7 +173,7 @@ $(function () {
               slidesToShow: 1,
               slideToScroll: 1,
               infinite: false,
-              dots: false,
+              dots: true,
               arrows: true
             }
           }
@@ -253,7 +260,7 @@ $(function () {
       infoWindow[this.value].open(map, marker[this.value])
       $('.locationCarousel').slick('slickGoTo', 0);
       controller.renderAllTag(this.value);
-      controller.renderMainLocationInfoView(data, this.value);
+      controller.renderMainLocationInfoView(controller.filteredArray, this.value);
       $('.locationCarousel')
         .eq(lastItem)
         .css({visibility: 'hidden', height: 0, marginBottom: 0});

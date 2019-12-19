@@ -1,38 +1,31 @@
-.latestRelease {
+.result {
   @include breakpoint($ipad) {
     margin-top: 15px;
   }
 
-  .latestReleaseNav {
+  .resultNav {
     max-width: 1170px;
     overflow: hidden;
     margin: 0 auto;
     display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
-    padding: 5px;
-
-    .latestReleaseItem {
-      cursor: pointer;
+    @include breakpoint($ipad){
       padding: 5px;
+    }
+
+    .resultItem {
+      cursor: pointer;
+      padding: 20px 10px 0;
       flex: 0 1 25%;
 
       @include breakpoint($ipad) {
         margin: 0;
         padding: 5px;
-        flex-basis: 33.33%;
-        height: auto;
-      }
-      @include breakpoint($iphone) {
-        margin: 0;
-        padding: 5px;
-        flex-basis: 50%;
-        height: auto;
+        flex: 0 1 50%;
       }
 
-      .latestReleaseItem-img {
-        @include breakpoint($ipad){
-          height: 120px;
-        }
+      .resultItem-img {
         background-position: center center;
         background-size: cover;
         height: 200px;
@@ -51,21 +44,25 @@
         }
       }
 
-      .latestReleaseItem-content {
+      .resultItem-content {
+        text-align: center;
+        line-height: 1.5;
+        font-size: $defaultFontSize;
         display: flex;
+        flex-direction: column;
         justify-content: center;
+        align-items: center;
         padding: 10px;
-
-        .latestReleaseItem-subject {
+        color: $color_fontColor;
+        font-weight: normal;
+        .resultItem-subject {
+          color: $color_occupy;
+          line-height: 1.6;
           br {
-            display: none;
-            @include breakpoint($iphone) {
+            @include breakpoint($iphone){
               display: block;
             }
-          }
-          color: $color_occupy;
-          @include breakpoint($ipad) {
-            font-size: .8rem;
+            display: none;
           }
         }
       }

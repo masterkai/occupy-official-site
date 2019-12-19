@@ -1,5 +1,6 @@
 header {
   &.bannerCarousel {
+
     &--latestRelease {
       padding-top: 28px;
       padding-bottom: 50px;
@@ -12,6 +13,7 @@ header {
       @include breakpoint($ipad){
         flex-direction: column;
         padding-bottom: 10px;
+        padding-top: 0;
       }
 
       .carouselBox {
@@ -44,10 +46,6 @@ header {
             height: auto;
           }
 
-          .slick-dots {
-            //bottom: 0;
-          }
-
           &:first-child {
             visibility: visible;
             height: auto;
@@ -62,12 +60,11 @@ header {
             }
           }
 
-
         }
       }
 
       .carouselVerticalNav {
-        @include breakpoint($iphone){
+        @include breakpoint($ipad){
           height: auto;
           width: 100%;
         }
@@ -83,14 +80,11 @@ header {
           justify-content: space-evenly;
           padding: 10px 10px 0 15px;
           height: 170px;
-          //border: 1px solid #002475;
           &_title {
             color: $color_occupy;
             line-height: 1.2;
             font-size: 1.25rem;
-            //padding-bottom: 10px;
-            //margin-bottom: 5px;
-            //border-bottom: 1px solid lighten($color_fontColor, 20%);
+
           }
 
           &_desc {
@@ -103,7 +97,6 @@ header {
         }
 
         .miniPic {
-          //border: 1px solid #002475;
           @include breakpoint($ipad) {
             display: none;
           }
@@ -153,10 +146,12 @@ header {
 
 
     }
+
     &--success {
       @include breakpoint($ipad) {
         flex-flow: column;
         padding-bottom: 10px;
+        padding-top: 0;
       }
       padding-top: 28px;
       padding-bottom: 50px;
@@ -257,19 +252,18 @@ header {
         height: 480px;
 
         .briefIntro {
+          @include breakpoint($iphone){
+            padding: 10px;
+          }
           display: flex;
           flex-flow: column;
           justify-content: space-evenly;
-          padding: 10px 15px 0 15px;
+          padding: 10px 0 0 15px;
           height: 170px;
-          //border: 1px solid #002475;
           &_title {
             color: $color_occupy;
             line-height: 1.2;
             font-size: 1.25rem;
-            //padding-bottom: 10px;
-            //margin-bottom: 5px;
-            //border-bottom: 1px solid lighten($color_fontColor, 20%);
           }
 
           &_desc {
@@ -333,7 +327,8 @@ header {
 
     &--location {
       @include breakpoint($iphone) {
-        height: 300px;
+        height: auto;
+
       }
       max-width: $locationInfoWidth;
       overflow: hidden;
@@ -367,6 +362,10 @@ header {
 
         @include breakpoint($iphone) {
           max-width: 100%;
+          margin: 0;
+        }
+        @include breakpoint($ipad){
+          height: auto;
         }
         display: flex;
         flex-direction: column;
@@ -424,6 +423,26 @@ header {
   }
 
   #bannerCarousel {
+    .banner {
+      .phone {
+        display: none;
+        @include breakpoint($iphone){
+          display: block;
+        }
+      }
+      .deskTop {
+        display: block;
+        @include breakpoint($iphone){
+          display: none;
+        }
+      }
+      //@include breakpoint($iphone) {
+      //  background-size: contain;
+      //}
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
     margin: 63px 5px 30px;
     @include breakpoint($ipad) {
       margin: 63px 0 0;

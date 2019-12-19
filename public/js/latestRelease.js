@@ -110,7 +110,7 @@ $(function () {
                   
               </div>
               <div class="latestReleaseItem-content">
-                  <div class="latestReleaseItem-subject">${x.briefTitle.substring(0, 11)} / ${x.locNum}</div>
+                  <div class="latestReleaseItem-subject"><span>${x.briefTitle.substring(0, 11)} / </span><br><span>${x.locNum}</span></div>
               </div>
   
           </div>`).join('')
@@ -132,10 +132,9 @@ $(function () {
         $('.latestReleaseCarousel').slick(
           {
             lazyLoad: 'ondemand',
-            laztLoad: 'progressive',
             infinite: false,
             arrows: true,
-            autoplay: false,
+            autoplay: true,
             dots: true,
           }
         )

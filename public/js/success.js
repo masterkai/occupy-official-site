@@ -18,8 +18,8 @@ $(function () {
     };
     const loadPage = function (pg) {
       $('.successNav').html('')
-      if ($('.pagination li:not(".cannotBeRemove")').length > 0) {
-        $('.pagination').find('li:not(".cannotBeRemove")').remove()
+      if ($('.success .pagination li:not(".cannotBeRemove")').length > 0) {
+        $('.success .pagination').find('li:not(".cannotBeRemove")').remove()
       }
       // pagination.innerHTML = ''
       posts.currentPage = pg
@@ -41,14 +41,17 @@ $(function () {
         if (x + 1 === posts.currentPage) {
           pageLi.classList.add('active')
         }
-        $('.pagination .cannotBeRemove:last-child').before(pageLi)
+        $('.success .pagination .cannotBeRemove:last-child').before(pageLi)
         if (totalPages <= 1) {
-          $('.pagination').css('display', 'none')
+          $('.success .pagination').css('display', 'none')
         }
       }
 
       for (let x = startPost; x < endPost; x++) {
         const item = posts.result[x]
+        let br = document.createElement('br')
+        let span1 =document.createElement('span')
+        let span2 =document.createElement('span')
         let div = document.createElement('div')
         div.classList.add('successItem')
         div.dataset.index = x
@@ -60,7 +63,11 @@ $(function () {
         itemContent.classList.add('successItem-content')
         let itemSubject = document.createElement('div')
         itemSubject.classList.add('successItem-subject')
-        itemSubject.textContent = item.briefTitle.substring(0, 14) + ' / ' + item.locNum
+        span1.textContent = item.briefTitle.substring(0, 14) + ' / ';
+        span2.textContent = item.locNum
+        itemSubject.append(span1)
+        itemSubject.append(br)
+        itemSubject.append(span2)
         itemContent.appendChild(itemSubject)
         div.appendChild(itemContent)
 
@@ -118,7 +125,7 @@ $(function () {
           lazyLoad: 'ondemand',
           infinite: false,
           arrows: true,
-          autoplay: false,
+          autoplay: true,
           dots: true,
           responsive: [
             {
@@ -127,7 +134,7 @@ $(function () {
                 slidesToShow: 1,
                 slideToScroll: 1,
                 infinite: false,
-                dots: false,
+                dots: true,
                 arrows: true,
               }
             }

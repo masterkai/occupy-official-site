@@ -1,0 +1,198 @@
+.about {
+  height: 846px;
+  max-width: 1160px;
+  margin: 0 auto;
+
+  &__nav {
+    @include breakpoint($iphone) {
+      flex: 1 1 30%;
+    }
+    border-right: lighten($color_fontColor, 25%) 1px solid;
+    flex: 0 1 262px;
+
+    ul {
+      @include breakpoint($iphone) {
+        padding: 40px 10px;
+      }
+      padding: 40px 40px;
+
+      li {
+        a {
+          &.active {
+            color: $color_occupy;
+          }
+
+          color: $color_fontColor;
+
+          &:link {
+            text-decoration: none;
+          }
+        }
+
+        &:last-child {
+          @include breakpoint($iphone) {
+            transform: translateX(0px);
+          }
+          letter-spacing: 1px;
+          transform: translateX(-8px);
+        }
+
+        color: $color_fontColor;
+        margin-bottom: 32px;
+        text-align: right;
+        letter-spacing: 8px;
+        font-size: 1.25rem;
+        @include breakpoint($iphone) {
+          font-size: $defaultFontSize;
+          letter-spacing: 2px;
+        }
+      }
+    }
+  }
+
+  &__content {
+    @include breakpoint($iphone) {
+      flex: 1 1 75%;
+      padding: 40px 20px;
+    }
+    flex: 1 1 calc(100% - 262px);
+    padding: 40px;
+    overflow: auto;
+
+    .contentBox {
+      max-width: 696px;
+      //border: #2fff27 1px solid;
+
+      .contentTitle {
+        &.active {
+          &:before {
+            color: $color_occupy;}
+        }
+        &:before {
+          @include breakpoint($iphone) {
+            left: -22px;
+          }
+          left: -42px;
+          position: absolute;
+          content: '\f0da';
+          font-family: 'FontAwesome';
+          font-size: 1.375rem;
+          color: $color_fontColor;
+        }
+
+        position: relative;
+        font-size: 1.25rem;
+        color: $color_occupy;
+        margin-bottom: 15px;
+      }
+
+      div {
+        font-size: $defaultFontSize;
+        color: $color_fontColor;
+      }
+
+      p {
+        &:last-child {
+          margin-bottom: 56px;
+        }
+        @include breakpoint($iphone) {
+          line-height: 1.375;
+        }
+        font-size: $defaultFontSize;
+        color: $color_fontColor;
+        line-height: 2;
+        margin-bottom: 30px;
+        text-align: justify;
+      }
+
+      ul {
+        li {
+          &:last-child {
+            margin-bottom: 56px;
+          }
+
+          div {
+            @include breakpoint($iphone) {
+              flex: 1 1 auto;
+            }
+            box-sizing: border-box;
+            flex: 0 0 90px;
+            //border: #0EB5FF 1px solid;
+            text-align: justify;
+          }
+
+          .valueText {
+            a {
+              @include breakpoint($iphone) {
+                font-size: .74rem;
+              }
+            }
+            flex: 1 1 auto;
+          }
+          @include breakpoint($iphone) {
+            flex-flow: column wrap;
+            justify-content: center;
+            line-height: 1.375;
+            margin-bottom: 15px;
+          }
+          display: flex;
+          flex-flow: row nowrap;
+          font-size: $defaultFontSize;
+          color: $color_fontColor;
+          line-height: 2;
+        }
+      }
+
+      ol {
+        padding: 10px 20px;
+
+        li {
+          &:last-child {
+            margin-bottom: 56px;
+          }
+          @include breakpoint($iphone) {
+            line-height: 1.375;
+          }
+          display: list-item;
+          list-style: decimal;
+          flex-flow: row nowrap;
+          font-size: $defaultFontSize;
+          color: $color_fontColor;
+          line-height: 2;
+        }
+      }
+    }
+  }
+
+  .bg-banner {
+    @include breakpoint($iphone) {
+      height: 150px;
+      overflow: auto;
+    }
+    background-position: center;
+    background-size: cover;
+    height: 262px;
+    max-width: 1160px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    .copy {
+      padding: 20px;
+      text-align: center;
+      color: #054A8E;
+      line-height: 2;
+
+    }
+  }
+
+  .aboutBox {
+    display: flex;
+    height: calc(100% - 262px);
+    @include breakpoint($iphone) {
+      height: calc(100% - 150px);
+    }
+
+  }
+}

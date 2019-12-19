@@ -1,4 +1,7 @@
 .fbLink {
+  @include breakpoint($iphone) {
+    margin-top: 10px;
+  }
   margin-top: 30px;
   width: 100%;
   overflow: hidden;
@@ -18,14 +21,20 @@
     //}
 
     img {
-      transition: all .3s ease-in-out;
+      @include breakpoint($ipad) {
+        height: auto;
+      }
+      @include breakpoint($iphone) {
+        height: 85px;
+      }
       &:hover {
         opacity: 1;
       }
+      transition: all .3s ease-in-out;
       cursor: pointer;
       opacity: .5;
       width: 50%;
-      flex: 1 1 50%;
+      flex: 0 1 auto;
       //@include breakpoint($ipad) {
       //  flex: 1 1 100%;
       //  width: 100%;

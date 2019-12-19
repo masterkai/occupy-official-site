@@ -1,6 +1,6 @@
 .spotSearch {
   @include breakpoint($nav_mobile){
-    display: block;
+    display: none;
   }
   display: none;
   padding: 20px;

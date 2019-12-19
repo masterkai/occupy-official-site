@@ -10,7 +10,10 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
-
+    @include breakpoint($iphone){
+      justify-content: space-between;
+      padding: 5px;
+    }
     .successItem {
       cursor: pointer;
       padding: 20px 10px 0;
@@ -20,6 +23,11 @@
         flex: 0 1 33.33%;
         margin: 0;
         padding: 0;
+      }
+      @include breakpoint($iphone) {
+        flex: 1 1 50%;
+        margin: 0;
+        padding: 5px;
       }
 
       .successItem-img {
@@ -45,9 +53,22 @@
         display: flex;
         justify-content: center;
         padding: 10px;
+        @include breakpoint($iphone) {
+          padding: 5px 2px;
+        }
 
         .successItem-subject {
+          br {
+            display: none;
+            @include breakpoint($iphone) {
+              display: block;
+            }
+          }
           color: $color_occupy;
+          @include breakpoint($iphone) {
+            font-size: $defaultFontSize;
+
+          }
         }
       }
     }

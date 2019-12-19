@@ -10,6 +10,7 @@
   }
   @include breakpoint($iphone){
     margin: 0 auto;
+    padding: 0 10px;
   }
 
   .mainInfo {
@@ -22,7 +23,7 @@
 
     .locationTitle {
       span {
-        font-weight: 100;
+        font-weight: normal;
         color: $color_occupy;
         font-size: 1.798125rem;
       }
@@ -49,7 +50,7 @@
       text-align: justify;
 
       p {
-        font-weight: 100;
+        font-weight: normal;
 
       }
 
@@ -59,7 +60,7 @@
       }
 
       font-size: $standardFontSize;
-      line-height: 1.6;
+      line-height: $lineHeight;
     }
   }
 
@@ -73,15 +74,17 @@
     }
     @include breakpoint($iphone){
       height: auto;
-      max-height: 200px;
+      flex-basis: auto;
+      max-height: 100%;
+      justify-content: flex-start;
     }
 
     .list {
       text-indent: -5em;
       margin-left:5em;
-      line-height: 2;
+      line-height: $lineHeight;
       margin-bottom: 0;
-      font-weight: 100;
+      font-weight: normal;
       color: $color_fontColor;
       font-size: $standardFontSize;
 

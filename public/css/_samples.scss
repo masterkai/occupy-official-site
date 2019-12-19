@@ -1,4 +1,7 @@
 .sampleSec {
+  @include breakpoint($iphone){
+    display: none;
+  }
   margin: 10px auto 0;
   .slick-next, .slick-prev {
     top:25%

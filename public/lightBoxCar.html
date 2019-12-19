@@ -6,7 +6,8 @@
     <meta name="viewport"
           content="width=device-width, initial-scale=1, shrink-to-fit=no, maximum-scale=1.0, user-scalable=0">
     <title>ES6</title>
-    <link rel="icon" type="image/png" sizes="96x96" href="./favicon-96x96.png">    <!--=========================== CSS ===========================-->
+    <link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+    <!--=========================== CSS ===========================-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
@@ -20,6 +21,8 @@
     <!--=========================== JS ===========================-->
     <script defer defer src="build/js/light.min.js"></script>
     <script defer defer src="build/js/brands.min.js"></script>
+    <!--    <script defer defer src="build/js/regular.min.js"></script>-->
+    <!--    <script defer defer src="build/js/solid.min.js"></script>-->
     <script defer defer src="build/js/fontawesome.min.js"></script>
     <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
@@ -583,69 +586,172 @@
         </section>
         <!--end of course search bar-->
 
-        <!--filter-panel-container-->
-        <div class="filter-panel-section">
+        <div class="empty" style="margin-top: 100px;"></div>
+
+        <ul class="accordion">
+            <li class="tabs active">
+                <div class="social-links">
+                    <img src="./build/images/lightBoxCar/tab01svg.svg" alt="" class="img-responsive">
+                </div>
+                <div class="paragraph" style="background-image: url(./build/images/lightBoxCar/car_dior_1.jpg)">
+                </div>
+            </li>
+            <li class="tabs">
+                <div class="social-links">
+                    <img src="./build/images/lightBoxCar/tab02svg.svg" alt="" class="img-responsive">
+                </div>
+                <div class="paragraph" style="background-image: url(./build/images/lightBoxCar/car_dior_1.jpg)">
+                </div>
+            </li>
+            <li class="tabs">
+                <div class="social-links">
+                    <img src="./build/images/lightBoxCar/tab03svg.svg" alt="" class="img-responsive">
+                </div>
+                <div class="paragraph" style="background-image: url(./build/images/lightBoxCar/car_dior_1.jpg)">
+                </div>
+            </li>
+            <li class="tabs">
+                <div class="social-links">
+                    <img src="./build/images/lightBoxCar/tab04svg.svg" alt="" class="img-responsive">
+                </div>
+                <div class="paragraph" style="background-image: url(./build/images/lightBoxCar/car_dior_1.jpg)">
+                </div>
+            </li>
+            <li class="tabs">
+                <div class="social-links">
+                    <img src="./build/images/lightBoxCar/tab05svg.svg" alt="" class="img-responsive">
+                </div>
+                <div class="paragraph" style="background-image: url(./build/images/lightBoxCar/car_dior_1.jpg)">
+                </div>
+            </li>
+        </ul>
+
+        <div class="filter-panel-section filter-panel-section--lightBoxCar">
             <div class="container">
                 <div class="row">
-                    <div class="filter-panel-container filter-panel-container__success" id="filterPanelBox__success">
-                        <div class="recommend-container recommend-container__success">
-                            <span><span class="xs-hidden">成功案例</span>產業分項</span>
-                            <select name="">
-                                <option value=null>請選擇</option>
+                    <div class="filter-panel-container">
+                        <div class="recommend-container recommend-container__lightBoxCar">
+                            <span><span class="xs-hidden">17噸鷗翼行動燈箱車</span>成功案例</span>
+                            <select id="selDiv" name="">
+                                <option value="0">17噸鷗翼行動燈箱車</option>
+                                <option value="1">17噸櫥窗行動燈箱車</option>
+                                <option value="2">17噸LED行動燈箱車</option>
+                                <option value="3">3.5噸行動燈箱車改裝</option>
+                                <option value="4">胖卡改裝</option>
                             </select>
                         </div>
-
+                        <div class="separateLine"></div>
+                        <a data-toggle="tooltip" title="點撃我!下載媒體卡" role="button"><i
+                                class="fal fa-arrow-to-bottom fa-2x"></i>
+                        </a>
                     </div>
                 </div>
             </div>
         </div>
 
-
-        <!--header-->
-        <div class="container">
-            <div class="row">
-                <header class="bannerCarousel--success">
-                    <div class="carouselBox carouselBox--success" id="carouselBox--success"></div>
-                    <div class="carouselVerticalNav carouselVerticalNav--success">
-                        <div class="conditionBtn conditionBtn_right">
-                            <i class="fal fa-chevron-double-right"></i>
-                        </div>
-                        <div class="conditionBtn conditionBtn_left">
-                            <i class="fal fa-chevron-double-left"></i>
-                        </div>
-                    </div>
-                </header>
-            </div>
-        </div>
-
-        <!--start of 成功案例-->
-        <section class="success">
+        <section class="lightBoxCar">
             <div class="container">
                 <div class="row">
-                    <div class="section-title">
-                        <div class="bar"></div>
-                    </div>
-                    <div class="successNav">
-                    </div>
-                    <nav aria-label="Page navigation" style="text-align: center;">
-                        <ul class="pagination">
-                            <li class="cannotBeRemove">
-                                <a href="" aria-label="Previous">
-                                    <span aria-hidden="true">&laquo;</span>
-                                </a>
-                            </li>
+                    <div class="lightBoxCarNav"><div data-month="11" class="lightBoxCarItem">
+                        <div class="lightBoxCarItem-img" style="background-image: url(./build/images/cl_002_mingyao_1.jpg)">
 
-                            <li class="cannotBeRemove">
-                                <a href="" aria-label="Next">
-                                    <span aria-hidden="true">&raquo;</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </nav>
+                        </div>
+                        <div class="lightBoxCarItem-content">
+                            <div class="lightBoxCarItem-subject"><span>明曜百貨周年慶 / </span><br><span>CL-002</span></div>
+                        </div>
+
+                    </div><div data-month="11" class="lightBoxCarItem">
+                        <div class="lightBoxCarItem-img" style="background-image: url(./build/images/cl_003_nutrilon_1.jpg)">
+
+                        </div>
+                        <div class="lightBoxCarItem-content">
+                            <div class="lightBoxCarItem-subject"><span>諾優能 支持你的每一步 / </span><br><span>CL-003</span></div>
+                        </div>
+
+                    </div><div data-month="11" class="lightBoxCarItem">
+                        <div class="lightBoxCarItem-img" style="background-image: url(./build/images/l_004_shinkongbank_1.jpg)">
+
+                        </div>
+                        <div class="lightBoxCarItem-content">
+                            <div class="lightBoxCarItem-subject"><span>新光銀行 伴您前往幸福 / </span><br><span>L-004</span></div>
+                        </div>
+
+                    </div><div data-month="11" class="lightBoxCarItem">
+                        <div class="lightBoxCarItem-img" style="background-image: url(./build/images/nb_057_line_1.jpg)">
+
+                        </div>
+                        <div class="lightBoxCarItem-content">
+                            <div class="lightBoxCarItem-subject"><span>熊大農場 快樂每一天 / </span><br><span>NB-057</span></div>
+                        </div>
+
+                    </div><div data-month="11" class="lightBoxCarItem">
+                        <div class="lightBoxCarItem-img" style="background-image: url(./build/images/nb_060_switch_1.jpg)">
+
+                        </div>
+                        <div class="lightBoxCarItem-content">
+                            <div class="lightBoxCarItem-subject"><span>SWITCH 健身環大 / </span><br><span>NB-060</span></div>
+                        </div>
+
+                    </div><div data-month="11" class="lightBoxCarItem">
+                        <div class="lightBoxCarItem-img" style="background-image: url(./build/images/nb_081_xingfu_1.jpg)">
+
+                        </div>
+                        <div class="lightBoxCarItem-content">
+                            <div class="lightBoxCarItem-subject"><span>世界首創 幸福堂 / </span><br><span>NB-081</span></div>
+                        </div>
+
+                    </div><div data-month="11" class="lightBoxCarItem">
+                        <div class="lightBoxCarItem-img" style="background-image: url(./build/images/nn_109_drive_1.jpg)">
+
+                        </div>
+                        <div class="lightBoxCarItem-content">
+                            <div class="lightBoxCarItem-subject"><span>台灣代駕 消滅酒駕 / </span><br><span>NN-109</span></div>
+                        </div>
+
+                    </div><div data-month="11" class="lightBoxCarItem">
+                        <div class="lightBoxCarItem-img" style="background-image: url(./build/images/nw_104_nobel_1.jpg)">
+
+                        </div>
+                        <div class="lightBoxCarItem-content">
+                            <div class="lightBoxCarItem-subject"><span>諾貝爾醫療集團 / </span><br><span>NW-104AB</span></div>
+                        </div>
+
+                    </div><div data-month="11" class="lightBoxCarItem">
+                        <div class="lightBoxCarItem-img" style="background-image: url(./build/images/nw_106_chanel_1.jpg)">
+
+                        </div>
+                        <div class="lightBoxCarItem-content">
+                            <div class="lightBoxCarItem-subject"><span>CHANEL / </span><br><span>NW-106</span></div>
+                        </div>
+
+                    </div><div data-month="11" class="lightBoxCarItem">
+                        <div class="lightBoxCarItem-img" style="background-image: url(./build/images/nw_107b_drive_1.jpg)">
+
+                        </div>
+                        <div class="lightBoxCarItem-content">
+                            <div class="lightBoxCarItem-subject"><span>台灣代駕 消滅酒駕 / </span><br><span>NW-107B</span></div>
+                        </div>
+
+                    </div><div data-month="11" class="lightBoxCarItem">
+                        <div class="lightBoxCarItem-img" style="background-image: url(./build/images/nw_128_fidelity_1.jpg)">
+
+                        </div>
+                        <div class="lightBoxCarItem-content">
+                            <div class="lightBoxCarItem-subject"><span>富達多重 GOOD好收 / </span><br><span>NW-128</span></div>
+                        </div>
+
+                    </div><div data-month="11" class="lightBoxCarItem">
+                        <div class="lightBoxCarItem-img" style="background-image: url(./build/images/oc_143_switch_1.jpg)">
+
+                        </div>
+                        <div class="lightBoxCarItem-content">
+                            <div class="lightBoxCarItem-subject"><span>寶可夢最強劍盾新發售 / </span><br><span>OC-143</span></div>
+                        </div>
+
+                    </div></div>
                 </div>
             </div>
         </section>
-        <!--end of 成功案例-->
 
         <!--FB Link-->
         <div class="fbLink">
@@ -674,6 +780,9 @@
     </div>
 </div>
 
+<div class="modalDownload">
+
+</div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/3.0.1/jquery-migrate.min.js"></script>
@@ -683,9 +792,17 @@
         integrity="sha256-oh7N5nthuhldTk8/34Za7FXv3BkeVN9vAnYk/pLfC78=" crossorigin="anonymous"></script>
 <script type="application/javascript" src="build/js/templates.js"></script>
 <script type="application/javascript" src="build/js/venobox.min.js"></script>
-<script type="application/javascript" src="build/js/jquery.scrollTo.min.js"></script>
+<script type="application/javascript" src="build/js/jquery.fileDownload.js"></script>
 <script type="application/javascript" src="http://localhost:35729/livereload.js"></script>
 <script type="application/javascript" src="build/js/scripts.min.js"></script>
 <script type="application/javascript" src="build/js/slick.min.js"></script>
+<script>
+  $('.accordion .tabs').each(function (index, target) {
+    $(target).click(function () {
+      $('.accordion .tabs').removeClass('active')
+      $(this).addClass('active')
+    })
+  })
+</script>
 </body>
 </html>

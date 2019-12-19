@@ -1,4 +1,13 @@
 .filter-panel-section {
+  &--lightBoxCar {
+    margin-top: 0!important;
+  }
+  @include breakpoint($ipad) {
+    padding: 10px 20px 10px;
+  }
+  @include breakpoint($iphone) {
+    padding: 10px;
+  }
   max-width: 1160px;
   margin-right: auto;
   margin-left: auto;
@@ -7,40 +16,102 @@
   border-bottom: 1px solid lighten($color_fontColor, 30%);
 
   .filter-panel-container {
+    &--lightBoxCar {
+      margin-top: 0;
+    }
     &__success {
       .separateLine {
         margin: 0 20px;
       }
-    }
-    &__latestRelease {
-      .separateLine {
-        margin: 0 20px;
+
+      .recommend-container {
+        @include breakpoint($iphone) {
+          flex-basis: auto;
+        }
+      }
+
+      .filter-tag {
+        &:first-child {
+          @include breakpoint($iphone) {
+            flex-basis: auto;
+          }
+        }
+
+        &:last-child {
+          @include breakpoint($iphone) {
+            flex-basis: 33.33%;
+          }
+        }
+
       }
     }
 
-    display: flex;
+    &__latestRelease {
+      .separateLine {
+        @include breakpoint($iphone) {
+          display: none;
+        }
+        margin: 0 20px;
+      }
+
+      .filter-tag {
+        &:first-child {
+          @include breakpoint($iphone) {
+            flex-basis: auto;
+          }
+        }
+        &:last-child {
+          @include breakpoint($iphone) {
+            flex-basis: 33.33%;
+          }
+        }
+      }
+    }
 
     .recommend-container {
       @include breakpoint($ipad) {
-        flex-wrap: wrap;
+        flex-wrap: nowrap;
         justify-content: center;
+        //margin-bottom: 10px;
+        //margin-left: 10px;
+
       }
       display: flex;
       justify-content: space-around;
       align-items: center;
 
       &__latestRelease {
+        @include breakpoint($iphone) {
+          span {
+            font-size: 12px !important;
+          }
+        }
+
         .month {
+          @include breakpoint($iphone) {
+            padding-right: 2px;
+          }
+
           &.active {
             color: $color_occupy;
             background-color: unset;
           }
+
           &:last-child {
+            @include breakpoint($iphone) {
+              display: none;
+            }
             padding-right: 0;
           }
+
           padding-right: 15px;
           color: $color_fontColor;
           cursor: pointer;
+        }
+      }
+      &__lightBoxCar {
+        span {
+          color: $color_occupy;
         }
       }
 
@@ -76,11 +147,35 @@
         }
       }
 
+      label {
+        font-size: 20px;
+        color: $color_occupy;
+        margin-right: 5px;
+        white-space: nowrap;
+        @include breakpoint($iphone) {
+          font-size: .8rem;
+          margin-right: 2px;
+        }
+      }
+
       span {
+        &.xs-hidden {
+          padding-right: 0;
+          margin-right: 0;
+        }
+
         @include breakpoint($ipad) {
           padding: 0;
+          margin-right: 5px;
         }
-        color: $color_occupy;
+        @include breakpoint($iphone) {
+          letter-spacing: -1px;
+          font-size: .8rem;
+          .xs-hidden {
+            display: none;
+
+          }
+        }
         font-size: $standardFontSize;
         white-space: nowrap;
         padding: 0 20px 0 0;
@@ -91,35 +186,64 @@
       display: flex;
       align-items: center;
       @include breakpoint($ipad) {
-        flex-wrap: wrap;
-        justify-content: center;
+        flex-basis: auto;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        align-items: center;
+      }
+      @include breakpoint($iphone) {
+        overflow: auto;
       }
 
       span {
         @include breakpoint($ipad) {
           padding: 10px;
         }
+        @include breakpoint($iphone) {
+          display: none;
+        }
+
         color: $color_fontColor;
         font-size: $standardFontSize;
         padding: 0 15px 0 0;
       }
 
       .tag {
+        &.active {
+          color: $color_occupy;
+        }
+        @include breakpoint($iphone) {
+          flex-wrap: nowrap;
+          white-space: nowrap;
+        }
         @include breakpoint($ipad) {
-          margin-bottom: 5px;
+          margin-bottom: 0;
         }
 
         &:hover {
           color: $color_fontColor;
         }
 
+        @include breakpoint($iphone) {
+          font-size: .8rem;
+        }
         cursor: pointer;
         border-radius: 20px;
         font-size: $standardFontSize;
         margin: 0 5px;
         padding: 5px 12px;
-        color: lighten($color_fontColor, 10%);
+        color: lighten($color_fontColor, 40%);
         border: 1px solid lighten($color_fontColor, 30%);
+      }
+    }
+
+    display: flex;
+    @include breakpoint($iphone) {
+      flex-flow: row nowrap;
+      align-items: center;
+      justify-content: center;
+      .separateLine {
+        display: none;
       }
     }
   }

@@ -6,7 +6,8 @@
     <meta name="viewport"
           content="width=device-width, initial-scale=1, shrink-to-fit=no, maximum-scale=1.0, user-scalable=0">
     <title>ES6</title>
-    <link rel="icon" type="image/png" sizes="96x96" href="./favicon-96x96.png">    <!--=========================== CSS ===========================-->
+    <link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+    <!--=========================== CSS ===========================-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
@@ -20,6 +21,8 @@
     <!--=========================== JS ===========================-->
     <script defer defer src="build/js/light.min.js"></script>
     <script defer defer src="build/js/brands.min.js"></script>
+    <!--    <script defer defer src="build/js/regular.min.js"></script>-->
+    <!--    <script defer defer src="build/js/solid.min.js"></script>-->
     <script defer defer src="build/js/fontawesome.min.js"></script>
     <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
@@ -402,7 +405,7 @@
                         <a class="menuToggle lv1Menu" href="#video">聯絡我們</a>
 
                     </li>
-                    <li class="searchToggleBtn wow fadeInRight" data-wow-delay=".8s">
+                    <li class="searchToggleBtn wow fadeInRight active" data-wow-delay=".8s">
                         <a href="#"><i class="fal fa-search"></i></a>
                         <div class="mddWrap" style="height: 100px;">
                             <div class="mddInner">
@@ -583,49 +586,26 @@
         </section>
         <!--end of course search bar-->
 
-        <!--filter-panel-container-->
+        <div class="empty" style="margin-top: 70px;"></div>
+
         <div class="filter-panel-section">
             <div class="container">
                 <div class="row">
-                    <div class="filter-panel-container filter-panel-container__success" id="filterPanelBox__success">
-                        <div class="recommend-container recommend-container__success">
-                            <span><span class="xs-hidden">成功案例</span>產業分項</span>
-                            <select name="">
-                                <option value=null>請選擇</option>
-                            </select>
+                    <div class="filter-panel-container">
+                        <div class="filter-tag" id="resultRelatedTags">
+                            <span style="color: #0EB5FF;">關鍵字搜尋</span>
+                            <div class="tag active">電信通訊</div>
                         </div>
-
                     </div>
                 </div>
             </div>
         </div>
 
-
-        <!--header-->
-        <div class="container">
-            <div class="row">
-                <header class="bannerCarousel--success">
-                    <div class="carouselBox carouselBox--success" id="carouselBox--success"></div>
-                    <div class="carouselVerticalNav carouselVerticalNav--success">
-                        <div class="conditionBtn conditionBtn_right">
-                            <i class="fal fa-chevron-double-right"></i>
-                        </div>
-                        <div class="conditionBtn conditionBtn_left">
-                            <i class="fal fa-chevron-double-left"></i>
-                        </div>
-                    </div>
-                </header>
-            </div>
-        </div>
-
-        <!--start of 成功案例-->
-        <section class="success">
+        <section class="result">
             <div class="container">
                 <div class="row">
-                    <div class="section-title">
-                        <div class="bar"></div>
-                    </div>
-                    <div class="successNav">
+                    <div class="resultNav">
+
                     </div>
                     <nav aria-label="Page navigation" style="text-align: center;">
                         <ul class="pagination">
@@ -645,7 +625,23 @@
                 </div>
             </div>
         </section>
-        <!--end of 成功案例-->
+
+        <div class="modalMask">
+            <div class="posting">
+                <div class="container--result">
+                    <div class="close"><i class="fal fa-times"></i></div>
+                    <div class="carouselVerticalNav--result">
+                        <div class="conditionBtn conditionBtn_right">
+                            <i class="fal fa-chevron-double-right"></i>
+                        </div>
+                        <div class="conditionBtn conditionBtn_left">
+                            <i class="fal fa-chevron-double-left"></i>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <!--FB Link-->
         <div class="fbLink">
@@ -674,11 +670,35 @@
     </div>
 </div>
 
+<!-- Load Facebook SDK for JavaScript -->
+<div id="fb-root"></div>
+<script>
+  window.fbAsyncInit = function () {
+    FB.init({
+      xfbml: true,
+      version: 'v5.0'
+    });
+  };
 
+  (function (d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s);
+    js.id = id;
+    js.src = 'https://connect.facebook.net/zh_TW/sdk/xfbml.customerchat.js';
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));</script>
+
+<!-- Your customer chat code -->
+<div class="fb-customerchat"
+     attribution=setup_tool
+     page_id="228998417160413">
+</div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/3.0.1/jquery-migrate.min.js"></script>
 <script type="application/javascript"
         src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.4.2/handlebars.min.js"
         integrity="sha256-oh7N5nthuhldTk8/34Za7FXv3BkeVN9vAnYk/pLfC78=" crossorigin="anonymous"></script>
 <script type="application/javascript" src="build/js/templates.js"></script>
@@ -686,6 +706,314 @@
 <script type="application/javascript" src="build/js/jquery.scrollTo.min.js"></script>
 <script type="application/javascript" src="http://localhost:35729/livereload.js"></script>
 <script type="application/javascript" src="build/js/scripts.min.js"></script>
-<script type="application/javascript" src="build/js/slick.min.js"></script>
+<script>
+  const resultArr = function (sort = '') {
+    return data.filter(item => item.sort === sort)
+  };
+
+  const tagsOfResultArr = function (arr) {
+    let array = [];
+    arr.forEach(item => {
+      array.push(item.tag)
+    });
+    return array
+  };
+
+  function du(arr) {
+    let duplicateArr = [].concat(...arr);
+    let sortArr = duplicateArr.sort();
+
+    let newArr = [];
+    for (let i = 0; i < duplicateArr.length; i++) {
+      if (sortArr[i + 1] == sortArr[i]) {
+        newArr.push(sortArr[i]);
+      }
+    }
+    return newArr;
+  }
+
+  const mergeDedupe = (arr) => {
+    return [...new Set(arr)];
+  };
+
+  // console.log(resultArr('電信通訊'));
+  // console.log(tagsOfResultArr(resultArr('電信通訊')));
+  // console.log(du(tagsOfResultArr(resultArr('電信通訊'))));
+  // console.log('output', mergeDedupe(du(tagsOfResultArr(resultArr('電信通訊')))));
+  const resultTags = mergeDedupe(du(tagsOfResultArr(resultArr('電信通訊'))));
+
+  const printTags = resultTags.map(function (item) {
+    return `<div class="tag">${item}</div>`
+  }).join('');
+
+  $('#resultRelatedTags').append(printTags);
+  //
+  // const re = resultArr('電信通訊').map(function (item) {
+  //   return `<div class="resultItem">
+  //             <div class="resultItem-img"
+  //                  style="background-image: url(./build/images/${item.pictures[0]}.jpg);">
+  //             </div>
+  //             <div class="resultItem-content">
+  //                 <div class="resultItem-subject"><span>${item.briefTitle.substring(0, 11)} / </span><br><span>${item.locNum}</span></div>
+  //
+  //             </div>
+  //         </div>`
+  // }).join('');
+  //
+  // $('.resultNav').children().remove();
+  // $('.resultNav').append(re);
+
+  // const pagination = document.querySelector('.pages');
+  // const output = document.querySelector('.resultNav');
+  const posts = {
+    postPerPage: 12,
+    currentPage: 1,
+    result: null
+  }
+  const init = function (data) {
+    console.log('ready');
+    posts.result = resultArr('電信通訊');
+    loadPage(1)
+  };
+  const loadPage = function (pg) {
+    $('.resultNav').html('')
+    if ($('.result .pagination li:not(".cannotBeRemove")').length > 0) {
+      $('.result .pagination').find('li:not(".cannotBeRemove")').remove()
+    }
+    // pagination.innerHTML = ''
+    posts.currentPage = pg
+    let startPost = (posts.currentPage - 1) * posts.postPerPage
+    let totalPages = Math.ceil(posts.result.length / posts.postPerPage)
+    let endPost = startPost + posts.postPerPage > posts.result.length ? posts.result.length : startPost + posts.postPerPage;
+    // console.log('totalPages', totalPages);
+
+    for (let x = 0; x < totalPages; x++) {
+      let pageLi = document.createElement('li')
+      let alink = document.createElement('a')
+      alink.textContent = (x + 1)
+      pageLi.dataset.page = (x + 1)
+      pageLi.appendChild(alink)
+      pageLi.addEventListener('click', function () {
+        loadPage(x + 1)
+      })
+
+      if (x + 1 === posts.currentPage) {
+        pageLi.classList.add('active')
+      }
+      $('.result .pagination .cannotBeRemove:last-child').before(pageLi)
+      if (totalPages <= 1) {
+        $('.result .pagination').css('display', 'none')
+      }
+    }
+
+    for (let x = startPost; x < endPost; x++) {
+      const item = posts.result[x]
+      let br = document.createElement('br')
+      let span1 =document.createElement('span')
+      let span2 =document.createElement('span')
+      let div = document.createElement('div')
+      div.classList.add('resultItem')
+      div.dataset.index = x
+      let img = document.createElement('div')
+      img.classList.add('resultItem-img')
+      img.style.backgroundImage = `url(./build/images/${item.pictures[0]}.jpg)`
+      div.appendChild(img)
+      let itemContent = document.createElement('div')
+      itemContent.classList.add('resultItem-content')
+      let itemSubject = document.createElement('div')
+      itemSubject.classList.add('resultItem-subject')
+      span1.textContent = item.briefTitle.substring(0, 14) + ' / ';
+      span2.textContent = item.locNum
+      itemSubject.append(span1)
+      itemSubject.append(br)
+      itemSubject.append(span2)
+      itemContent.appendChild(itemSubject)
+      div.appendChild(itemContent)
+
+
+      div.addEventListener('click', function (e) {
+        // console.log(div.dataset.index);
+        // clickEvent(parseInt(div.dataset.index), posts.result)
+        e.stopPropagation();
+
+        $('.container--result .slider').remove()
+        renderResultCarousel(div.dataset.index)
+        generateResultMiniPicSets(div.dataset.index)
+        if ($('.slider')) {
+          $(document).ready(function () {
+            $('.posting')
+              .toggle("fast", function () {
+                //　toggle時にリサイズすると表示される。
+                $('.slider').resize();
+                $('.modalMask').css('display', 'block')
+                // $('.miniPic--service img:first-child').trigger('click')
+                $('.slider').css({visibility: 'visible', height: 'auto', flexBasis: 'auto'})
+              });
+          })
+        }
+      });
+      // output.appendChild(div)
+      $('.resultNav').append(div)
+    }
+
+    // pagination.appendChild(pageOutput)
+    // $('.pagination').append(pageOutput)
+    window.onclick = function (event) {
+      if (event.target !== $('.posting')) {
+        $('.modalMask').css('display', 'none');
+        $('.posting').hide();
+      }
+    }
+    $('.container--result .close').click(function (e) {
+      e.stopPropagation();
+      $('.modalMask').css('display', 'none');
+      $('.posting').hide();
+    })
+
+    $('.posting').click(function (event) {
+      event.stopPropagation();
+    });
+
+    function renderResultCarousel(index) {
+      if ($('.slider')) {
+        $('.slider').children().remove();
+      }
+      const sliderSets = posts.result.map(item => {
+        let serviceCarouselItemHTML = item.pictures.map(x => `<div style="background-image: url(./build/images/${x}.jpg)">
+                            <img class="img-responsive" src="./build/images/emptyImg.gif" alt="">
+                        </div>`).join('');
+        return `<div class="slider">${serviceCarouselItemHTML}</div>`
+      });
+
+      $('.container--result').append(sliderSets[index])
+      if ($('.slider').length > 0) {
+        $('.slider').slick({
+          lazyLoad: 'ondemand',
+          infinite: false,
+          arrows: true,
+          autoplay: true,
+          dots: true,
+          responsive: [
+            {
+              breakpoint: 760,
+              settings: {
+                slidesToShow: 1,
+                slideToScroll: 1,
+                infinite: false,
+                dots: true,
+                arrows: true,
+              }
+            }
+          ]
+        });
+      }
+    }
+
+    function generateResultMiniPicSets(index = 0) {
+      if ($('.miniPic--result')) {
+        $('.miniPic--result').remove()
+      }
+      if ($('.briefIntro--result')) {
+        $('.briefIntro--result').remove()
+      }
+      const miniPicSet = posts.result.map(function (item) {
+        const imgItems = item.pictures.map(img => `<img src="./build/images/${img}.jpg" alt="">`).join('')
+        return `<div class="briefIntro--result">
+                            <div class="briefIntro_title">${item.briefTitle}<br><span style="margin-top: 15px;font-size: 15px;">${item.subTitle}</span></div>
+                            <div class="separateLineHorizontal"></div>
+                            <div class="briefIntro_desc">${item.brief}</div>
+                        </div>
+                        <div class="miniPic--result">${imgItems}</div>`
+      });
+      // document.querySelector('.carouselVerticalNav').insertAdjacentHTML('beforeend', miniPicSet[index])
+      $('.carouselVerticalNav--result').append(miniPicSet[index]);
+      // initialize conditionBtn
+      if ($('.miniPic--result img').length > 8) {
+        $('.conditionBtn_right').css('display', 'block')
+        $('.conditionBtn_right').click(function () {
+          $('.miniPic--result').scrollTo($('.miniPic--result img:last-child'), 0)
+        })
+      } else {
+        $('.conditionBtn_right').css('display', 'none')
+        $('.conditionBtn_left').css('display', 'none')
+      }
+      $('.conditionBtn_left').click(function () {
+        $('.miniPic--result').scrollTo($('.miniPic--result img:first-child'), 0)
+      })
+      if ($('.miniPic--result img').length > 16) {
+        $('.conditionBtn_right').click(function () {
+          $('.miniPic--result').scrollTo('225px', 0)
+        })
+      }
+
+      let miniPic = $('.miniPic--result img')
+      let miniPicLength = miniPic.length
+
+      // console.log(miniPicLength);
+      miniPic.each(function (index, target) {
+        // console.log(target, index);
+        $(target).click(function () {
+          console.log(index);
+          $('.slider').slick('slickGoTo', index);
+        })
+      })
+
+      let scrollLeftPrev = 0;
+      $('.miniPic--result').scroll(function () {
+        let $elem = $('.miniPic--result');
+        let newScrollLeft = $elem.scrollLeft(),
+          width = $elem.width(),
+          scrollWidth = $elem.get(0).scrollWidth;
+        // let offset=8;
+        if (scrollWidth - newScrollLeft - width == 0) {
+          console.log('right end')
+          $('.conditionBtn_right').css('display', 'none')
+          $('.conditionBtn_left').css('display', 'block')
+        } else if (scrollWidth - newScrollLeft - width !== 0) {
+          $('.conditionBtn_right').click(function () {
+              $('.miniPic--result').scrollTo($('.miniPic--result img:last-child'), 0)
+            }
+          )
+        }
+        if ($(window).width() > 768 && miniPicLength > 8 && newScrollLeft === 0) {
+          console.log('left end')
+          $('.conditionBtn_left').css('display', 'none')
+          $('.conditionBtn_right').css('display', 'block')
+        } else if ($(window).width() < 768 && newScrollLeft === 0) {
+          $('.conditionBtn_left').css('display', 'none')
+          $('.conditionBtn_right').css('display', 'block')
+        }
+        scrollLeftPrev = newScrollLeft;
+      });
+
+    }
+
+  }
+  window.addEventListener('load', function () {
+    init(resultArr('電信通訊'));
+  });
+  // pagination end
+
+  // console.log('total page', $('.pagination li:not(".cannotBeRemove")').length);
+  $('.pagination li:last-child').click(function (e) {
+    e.preventDefault()
+    console.log('next clicked!');
+    if ($('.pagination .active').data('page') === $('.pagination li:not(".cannotBeRemove")').length) {
+      return false
+    } else {
+      loadPage(parseInt($('.pagination .active').data('page')) + 1)
+    }
+  })
+  $('.pagination li:first-child').click(function (e) {
+    e.preventDefault()
+    console.log('prev clicked!');
+    console.log('current:', $('.pagination .active').data('page'));
+    if ($('.pagination .active').data('page') === 1) {
+      return false
+    } else {
+      loadPage(parseInt($('.pagination .active').data('page')) - 1)
+    }
+  })
+</script>
 </body>
 </html>

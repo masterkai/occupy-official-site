@@ -12,7 +12,7 @@ $(function () {
           slidesToShow: 1,
           slideToScroll: 1,
           infinite: true,
-          dots: false,
+          dots: true,
           arrows: true,
 
         }

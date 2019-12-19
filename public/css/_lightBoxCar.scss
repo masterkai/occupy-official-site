@@ -1,9 +1,9 @@
-.latestRelease {
+.lightBoxCar {
   @include breakpoint($ipad) {
     margin-top: 15px;
   }
 
-  .latestReleaseNav {
+  .lightBoxCarNav {
     max-width: 1170px;
     overflow: hidden;
     margin: 0 auto;
@@ -11,7 +11,7 @@
     flex-wrap: wrap;
     padding: 5px;
 
-    .latestReleaseItem {
+    .lightBoxCarItem {
       cursor: pointer;
       padding: 5px;
       flex: 0 1 25%;
@@ -29,7 +29,7 @@
         height: auto;
       }
 
-      .latestReleaseItem-img {
+      .lightBoxCarItem-img {
         @include breakpoint($ipad){
           height: 120px;
         }
@@ -51,12 +51,12 @@
         }
       }
 
-      .latestReleaseItem-content {
+      .lightBoxCarItem-content {
         display: flex;
         justify-content: center;
         padding: 10px;
 
-        .latestReleaseItem-subject {
+        .lightBoxCarItem-subject {
           br {
             display: none;
             @include breakpoint($iphone) {
